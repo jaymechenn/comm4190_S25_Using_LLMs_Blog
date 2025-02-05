@@ -1,8 +1,8 @@
 project:
-  type: First Blog!
+  type: website
 
 website:
-  title: "My Explorations with LLMs"
+  title: First Blog!
   navbar:
     right:
       - about.qmd
