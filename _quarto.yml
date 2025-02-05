@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: First Blog!
+  title: "First Blog!"
   navbar:
     right:
       - about.qmd
