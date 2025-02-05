@@ -1,5 +1,5 @@
 ---
-title: First Blog
+title: Chatting with LLMs
 listing:
   contents: posts
   sort: date desc
