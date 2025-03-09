@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jaymechenn.github.io/comm4190_S25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
-    <lastmod>2025-03-09T04:51:02.327Z</lastmod>
+    <loc>https://jaymechenn.github.io/comm4190_S25_Using_LLMs_Blog/posts/003_going_home/index.html</loc>
+    <lastmod>2025-03-09T23:39:41.156Z</lastmod>
   </url>
   <url>
-    <loc>https://jaymechenn.github.io/comm4190_S25_Using_LLMs_Blog/posts/001_valentines_date/index.html</loc>
-    <lastmod>2025-03-09T04:51:02.327Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jaymechenn.github.io/comm4190_S25_Using_LLMs_Blog/index.html</loc>
-    <lastmod>2025-03-09T04:51:02.326Z</lastmod>
+    <loc>https://jaymechenn.github.io/comm4190_S25_Using_LLMs_Blog/posts/002_meal_plan/index.html</loc>
+    <lastmod>2025-03-09T23:39:41.156Z</lastmod>
   </url>
   <url>
     <loc>https://jaymechenn.github.io/comm4190_S25_Using_LLMs_Blog/about.html</loc>
-    <lastmod>2025-03-09T04:51:02.326Z</lastmod>
+    <lastmod>2025-03-09T23:39:41.154Z</lastmod>
   </url>
   <url>
-    <loc>https://jaymechenn.github.io/comm4190_S25_Using_LLMs_Blog/posts/002_meal_plan/Untitled.html</loc>
-    <lastmod>2025-03-09T04:51:02.328Z</lastmod>
+    <loc>https://jaymechenn.github.io/comm4190_S25_Using_LLMs_Blog/index.html</loc>
+    <lastmod>2025-03-09T23:39:41.154Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jaymechenn.github.io/comm4190_S25_Using_LLMs_Blog/posts/001_valentines_date/index.html</loc>
+    <lastmod>2025-03-09T23:39:41.156Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jaymechenn.github.io/comm4190_S25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
+    <lastmod>2025-03-09T23:39:41.155Z</lastmod>
   </url>
 </urlset>
