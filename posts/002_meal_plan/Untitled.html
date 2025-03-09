@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="An LLM User">
-<meta name="dcterms.date" content="2024-02-02">
-<meta name="description" content="An example post from a Jupyter notebook">
+<meta name="author" content="Jayme Chen">
+<meta name="dcterms.date" content="2025-02-18">
+<meta name="description" content="Can GPT make a feasible and adaptable meal plan basede on my goals and preferences?">
 
-<title>A test post – My LLM Experiments</title>
+<title>Meal Planner – My LLM Experiments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,10 +116,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">A test post</h1>
+      <h1 class="title">Meal Planner</h1>
                   <div>
         <div class="description">
-          An example post from a Jupyter notebook
+          Can GPT make a feasible and adaptable meal plan basede on my goals and preferences?
         </div>
       </div>
                           <div class="quarto-categories">
@@ -136,14 +136,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>An LLM User </p>
+               <p>Jayme Chen </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 2, 2024</p>
+        <p class="date">February 18, 2025</p>
       </div>
     </div>
     
@@ -162,53 +162,300 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="a-visualization-problem-for-llms" class="level2">
-<h2 class="anchored" data-anchor-id="a-visualization-problem-for-llms">A visualization problem for LLMs</h2>
-<ul>
-<li>Read the following and see if you can answer the question:</li>
-</ul>
-<blockquote class="blockquote">
-<p>There are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?</p>
-</blockquote>
-<p>Most likely you answered <strong>purple</strong>…</p>
-<p>But it is possible you first said <strong>green</strong> (don’t worry if you did it is quite a common response!)</p>
-<section id="how-do-we-do-it" class="level3">
-<h3 class="anchored" data-anchor-id="how-do-we-do-it">How do we do it?</h3>
-<p>It’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.</p>
-<p>Notice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.</p>
-<p><strong>Notice</strong> 1. The use of <em>anaphor</em> or <em>reference</em>. - <code>Three BOXES -&gt; a pink/purple/green ONE</code> as opposed to <code>a pink box, a purple box and a green box</code>. - <code>The PINK ONE is in the middle ... the purple</code> {BOX} <code>below IT</code> {the pink box}</p>
-<pre><code>We tend to try and avoid this kind of repetition to make our speech more coherent.</code></pre>
-<ol start="2" type="1">
-<li>Although the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |</li>
-</ol>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Meal Planning can be difficult. Especially if you have goals, formulating a plan that fits your needs, preferences, and schedule can be quite a challenge. Let’s see if GPT can create a realistic meal plan for me, a adjust it basede on my goals and tastes.</p>
 </section>
-<section id="how-do-llms-response-to-the-prompt" class="level3">
-<h3 class="anchored" data-anchor-id="how-do-llms-response-to-the-prompt">How do LLMs response to the prompt?</h3>
-<p><strong>GPT3.5 Turbo</strong></p>
-<p><img src="gpt3-5.png" width="50%"></p>
-<p>Had some difficulties and answered <strong>green</strong></p>
-<p><strong>Llama2 (chat 7B version)</strong></p>
-<p><img src="llama2-chat7b.png" width="50%"></p>
+<section id="lets-go" class="level1">
+<h1>Let’s Go!</h1>
+<blockquote class="blockquote">
+<p>Prompt: Generate a meal plan for my day</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Response: Here’s a balanced meal plan for your day:</p>
+</blockquote>
+<section id="breakfast-800-am" class="level3">
+<h3 class="anchored" data-anchor-id="breakfast-800-am"><strong>Breakfast (8:00 AM)</strong></h3>
 <ul>
-<li>Answered correctly (<strong>purple</strong>) and used some so-called <em>chain-of-thought</em> reasoning</li>
+<li>Scrambled eggs with spinach and feta<br>
+</li>
+<li>Whole-grain toast<br>
+</li>
+<li>A small bowl of mixed berries (strawberries, blueberries, raspberries)<br>
+</li>
+<li>A cup of black coffee or green tea</li>
 </ul>
-<p><strong>Bing Chat (MS Co-pilot)</strong></p>
-<p>This LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.</p>
-<p>It get’s it correct:</p>
+</section>
+<section id="mid-morning-snack-1030-am" class="level3">
+<h3 class="anchored" data-anchor-id="mid-morning-snack-1030-am"><strong>Mid-Morning Snack (10:30 AM)</strong></h3>
+<ul>
+<li>Greek yogurt with honey and almonds<br>
+</li>
+<li>A small banana</li>
+</ul>
+</section>
+<section id="lunch-1230-pm" class="level3">
+<h3 class="anchored" data-anchor-id="lunch-1230-pm"><strong>Lunch (12:30 PM)</strong></h3>
+<ul>
+<li>Grilled chicken breast with quinoa and roasted vegetables (zucchini, bell peppers, and carrots)<br>
+</li>
+<li>A side of mixed greens with olive oil and balsamic vinegar<br>
+</li>
+<li>Sparkling water or herbal tea</li>
+</ul>
+</section>
+<section id="afternoon-snack-330-pm" class="level3">
+<h3 class="anchored" data-anchor-id="afternoon-snack-330-pm"><strong>Afternoon Snack (3:30 PM)</strong></h3>
+<ul>
+<li>Hummus with sliced cucumber and whole-wheat crackers<br>
+</li>
+<li>A handful of walnuts</li>
+</ul>
+</section>
+<section id="dinner-630-pm" class="level3">
+<h3 class="anchored" data-anchor-id="dinner-630-pm"><strong>Dinner (6:30 PM)</strong></h3>
+<ul>
+<li>Baked salmon with lemon and herbs<br>
+</li>
+<li>Steamed asparagus and mashed sweet potatoes<br>
+</li>
+<li>A glass of water with lemon</li>
+</ul>
+</section>
+<section id="evening-snack-830-pm-optional" class="level3">
+<h3 class="anchored" data-anchor-id="evening-snack-830-pm-optional"><strong>Evening Snack (8:30 PM, optional)</strong></h3>
+<ul>
+<li>A small portion of dark chocolate and a handful of almonds<br>
+</li>
+<li>Chamomile tea</li>
+</ul>
+<p>Would you like any modifications based on your dietary preferences or goals?</p>
+<ul>
+<li>Right off the bat, GPT generated a detailed and realistic meal plan for a day, including time stamps for each step.</li>
+<li>It also built in both meals and snacks to prevent me from going hungry</li>
+<li>The foods generated are all very healthy, featuring many fruits and vegetabls throughout the day, balanced with a healthy amount of protein and carbs.</li>
+<li>I assume the “for my day” part of the prompt is what led GPT to give time recommendations for each meal/snack</li>
+<li>Overall, GPT immediately generated an extremely solid meal plan for a day</li>
+</ul>
 <blockquote class="blockquote">
-<p>The color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪</p>
+<p>Prompt: I want to lose weight</p>
 </blockquote>
-<p>But when you follow up and ask it to create visual representation of the box arrangement</p>
 <blockquote class="blockquote">
-<p>PROMPT: Can you create a visual representation of how the boxes are arranged?</p>
+<p>Response: For weight loss, I’ll adjust your meal plan to be nutrient-dense, high in protein, and lower in calories while keeping you full and satisfied.</p>
 </blockquote>
-<p>It responds</p>
+</section>
+<section id="breakfast-800-am-1" class="level3">
+<h3 class="anchored" data-anchor-id="breakfast-800-am-1"><strong>Breakfast (8:00 AM)</strong></h3>
+<ul>
+<li>2 boiled or scrambled egg whites + 1 whole egg<br>
+</li>
+<li>Sautéed spinach and mushrooms<br>
+</li>
+<li>1 slice of whole-grain toast<br>
+</li>
+<li>Black coffee or green tea (no sugar)</li>
+</ul>
+</section>
+<section id="mid-morning-snack-1030-am-1" class="level3">
+<h3 class="anchored" data-anchor-id="mid-morning-snack-1030-am-1"><strong>Mid-Morning Snack (10:30 AM)</strong></h3>
+<ul>
+<li>Low-fat Greek yogurt with a few almonds and chia seeds<br>
+</li>
+<li>Half an apple</li>
+</ul>
+</section>
+<section id="lunch-1230-pm-1" class="level3">
+<h3 class="anchored" data-anchor-id="lunch-1230-pm-1"><strong>Lunch (12:30 PM)</strong></h3>
+<ul>
+<li>Grilled chicken breast or tofu<br>
+</li>
+<li>Cauliflower rice or a small portion of quinoa<br>
+</li>
+<li>Roasted Brussels sprouts and bell peppers<br>
+</li>
+<li>Mixed greens with lemon vinaigrette</li>
+</ul>
+</section>
+<section id="afternoon-snack-330-pm-1" class="level3">
+<h3 class="anchored" data-anchor-id="afternoon-snack-330-pm-1"><strong>Afternoon Snack (3:30 PM)</strong></h3>
+<ul>
+<li>Cucumber, celery, and carrot sticks with hummus<br>
+</li>
+<li>Green tea</li>
+</ul>
+</section>
+<section id="dinner-630-pm-1" class="level3">
+<h3 class="anchored" data-anchor-id="dinner-630-pm-1"><strong>Dinner (6:30 PM)</strong></h3>
+<ul>
+<li>Baked salmon or lean turkey<br>
+</li>
+<li>Steamed broccoli and roasted sweet potatoes (small portion)<br>
+</li>
+<li>Herbal tea or water with lemon</li>
+</ul>
+</section>
+<section id="evening-snack-830-pm-optional-1" class="level3">
+<h3 class="anchored" data-anchor-id="evening-snack-830-pm-optional-1"><strong>Evening Snack (8:30 PM, optional)</strong></h3>
+<ul>
+<li>A handful of almonds or a small protein smoothie (unsweetened almond milk, protein powder, spinach)</li>
+</ul>
+<p>This plan keeps you in a calorie deficit while providing enough protein, fiber, and healthy fats to keep you full. Let me know if you have any preferences or restrictions!</p>
+<ul>
+<li>Based on the new goal I provided of losing weight, GPT modified its meal plan accordingly</li>
+<li>It made substtiitutions such as egg-whites and low-fat Greek yogurt to go towards my goal. The original plan already featured mostly healthy foods, so I did not expect to see a huge amount of change</li>
+<li>It added a note at the end about how this updated plan helps me reach my goal, which was very helpful</li>
+</ul>
 <blockquote class="blockquote">
-<p>RESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:</p>
+<p>Prompt: I’m Asian</p>
 </blockquote>
-<p>And uses DALL-E3 to create 4 different attempts at a visual representation:</p>
-<p><img src="boxes.png" class="img-fluid"></p>
-<p><strong>NONE OF WHICH ARE CORRECT!!!</strong></p>
+<blockquote class="blockquote">
+<p>Here’s a weight-loss-friendly meal plan incorporating Asian flavors and ingredients:</p>
+</blockquote>
+</section>
+<section id="breakfast-800-am-2" class="level3">
+<h3 class="anchored" data-anchor-id="breakfast-800-am-2"><strong>Breakfast (8:00 AM)</strong></h3>
+<ul>
+<li>Miso soup with tofu and seaweed<br>
+</li>
+<li>1 boiled egg<br>
+</li>
+<li>A small bowl of steamed brown rice (or cauliflower rice for lower carbs)<br>
+</li>
+<li>Green tea (no sugar)</li>
+</ul>
+</section>
+<section id="mid-morning-snack-1030-am-2" class="level3">
+<h3 class="anchored" data-anchor-id="mid-morning-snack-1030-am-2"><strong>Mid-Morning Snack (10:30 AM)</strong></h3>
+<ul>
+<li>Edamame with a sprinkle of sea salt<br>
+</li>
+<li>A small serving of unsweetened soy milk</li>
+</ul>
+</section>
+<section id="lunch-1230-pm-2" class="level3">
+<h3 class="anchored" data-anchor-id="lunch-1230-pm-2"><strong>Lunch (12:30 PM)</strong></h3>
+<ul>
+<li>Grilled or steamed fish (salmon or mackerel)<br>
+</li>
+<li>Stir-fried bok choy and shiitake mushrooms with garlic<br>
+</li>
+<li>A small bowl of multigrain rice<br>
+</li>
+<li>Kimchi or pickled vegetables</li>
+</ul>
+</section>
+<section id="afternoon-snack-330-pm-2" class="level3">
+<h3 class="anchored" data-anchor-id="afternoon-snack-330-pm-2"><strong>Afternoon Snack (3:30 PM)</strong></h3>
+<ul>
+<li>Unsalted roasted nuts (almonds or walnuts)<br>
+</li>
+<li>A cup of matcha (without sugar)</li>
+</ul>
+</section>
+<section id="dinner-630-pm-2" class="level3">
+<h3 class="anchored" data-anchor-id="dinner-630-pm-2"><strong>Dinner (6:30 PM)</strong></h3>
+<ul>
+<li>Chicken or tofu stir-fry with broccoli, bell peppers, and ginger<br>
+</li>
+<li>Steamed cauliflower rice or konjac noodles<br>
+</li>
+<li>Side of miso soup</li>
+</ul>
+</section>
+<section id="evening-snack-830-pm-optional-2" class="level3">
+<h3 class="anchored" data-anchor-id="evening-snack-830-pm-optional-2"><strong>Evening Snack (8:30 PM, optional)</strong></h3>
+<ul>
+<li>A small serving of unsweetened yogurt with chia seeds<br>
+</li>
+<li>Herbal tea</li>
+</ul>
+<p>This meal plan aligns with traditional Asian cuisine while supporting your weight-loss goals. Let me know if you want to adjust anything!</p>
+<ul>
+<li>A bit of a curveball here, but I wanted to see how GPT would modify the plan for a particular taste. However, instead of asking it to explicitly change the plan, I simply stated that I am Asian to see if GPT would modify its plan to fit an Asian diet.</li>
+<li>GPT did, in fact, modify the plan to fit an Asian diet, now featuring items like Miso soup, bok choy, and matcha.</li>
+<li>In its conclusion statement, it made sure to mention that this plan appeals to both my Asian taste and my weight-loss goals, showing that it remembered details from my previous prompts.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Prompt: I like ice cream and burgers and chicken nuggets and French fries</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>You can still enjoy your favorite foods while losing weight by making healthier versions of them. Here’s how we can incorporate them into a balanced meal plan:</p>
+</blockquote>
+</section>
+<section id="breakfast-800-am-3" class="level3">
+<h3 class="anchored" data-anchor-id="breakfast-800-am-3"><strong>Breakfast (8:00 AM)</strong></h3>
+<ul>
+<li>Scrambled eggs with spinach and a drizzle of soy sauce<br>
+</li>
+<li>A small whole-grain wrap or multigrain toast<br>
+</li>
+<li>Green tea (no sugar)</li>
+</ul>
+</section>
+<section id="mid-morning-snack-1030-am-3" class="level3">
+<h3 class="anchored" data-anchor-id="mid-morning-snack-1030-am-3"><strong>Mid-Morning Snack (10:30 AM)</strong></h3>
+<ul>
+<li>Greek yogurt with a few berries and chia seeds<br>
+</li>
+<li>A handful of almonds</li>
+</ul>
+</section>
+<section id="lunch-1230-pm-3" class="level3">
+<h3 class="anchored" data-anchor-id="lunch-1230-pm-3"><strong>Lunch (12:30 PM)</strong></h3>
+<ul>
+<li><strong>Healthy Burger:</strong>
+<ul>
+<li>Grilled lean chicken or turkey patty (or tofu patty)<br>
+</li>
+<li>Whole wheat bun (or lettuce wrap for fewer carbs)<br>
+</li>
+<li>Loaded with veggies (tomato, lettuce, onions)<br>
+</li>
+<li>A light spread of Greek yogurt or avocado instead of mayo<br>
+</li>
+</ul></li>
+<li>A side of baked sweet potato fries</li>
+</ul>
+</section>
+<section id="afternoon-snack-330-pm-3" class="level3">
+<h3 class="anchored" data-anchor-id="afternoon-snack-330-pm-3"><strong>Afternoon Snack (3:30 PM)</strong></h3>
+<ul>
+<li>Roasted chickpeas or edamame<br>
+</li>
+<li>A small matcha latte (unsweetened)</li>
+</ul>
+</section>
+<section id="dinner-630-pm-3" class="level3">
+<h3 class="anchored" data-anchor-id="dinner-630-pm-3"><strong>Dinner (6:30 PM)</strong></h3>
+<ul>
+<li><strong>Healthier Chicken Nuggets &amp; Fries:</strong>
+<ul>
+<li>Air-fried or baked chicken nuggets (made with lean chicken and almond flour or whole wheat breadcrumbs)<br>
+</li>
+<li>Air-fried or baked French fries (sweet potatoes or regular potatoes)<br>
+</li>
+<li>A side of steamed greens (bok choy, broccoli, or spinach)</li>
+</ul></li>
+</ul>
+</section>
+<section id="evening-treat-830-pm-optional" class="level3">
+<h3 class="anchored" data-anchor-id="evening-treat-830-pm-optional"><strong>Evening Treat (8:30 PM, optional)</strong></h3>
+<ul>
+<li><strong>Healthier Ice Cream Alternative:</strong>
+<ul>
+<li>Blended frozen banana with a little cocoa powder and peanut butter<br>
+</li>
+<li>Or a small portion of low-calorie ice cream</li>
+</ul></li>
+</ul>
+<p>This way, you get to enjoy your favorite foods in a healthier way while still supporting your weight loss goals! Let me know if you’d like any adjustments.</p>
+<ul>
+<li>This time, I gave GPT what I thought was a very difficult task: liking fast food while still wanting to achieve weight loss</li>
+<li>GPT, however, handled the prompt very well, recommending healthier alternatives to each of the fast food items I mentioned.</li>
+<li>It also included slightly more detail regarding preparation in this meal plan, likely to differentiate these healthier alternatives from their fast food counterparts.</li>
+<li>It gave up on incorporating Asian cuisine, likely because I switched to non-Asian specifications for my food</li>
+<li>In the conclusion, it once again explained how the plan allows me to enjoy the foods I like while still supporting my weight loss goals, emphasizing its memory of my goals</li>
+</ul>
 
 
 </section>
