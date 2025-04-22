@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jayme Chen">
+<meta name="dcterms.date" content="2025-04-20">
+<meta name="description" content="A Test of Reasoning and Revision">
 
-<title>Chatting with LLMs – My LLM Experiments</title>
+<title>Can GPT Admit When It’s Wrong? – My LLM Experiments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4379b0ccadffce622b03caf4c46266b3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-411e38e12c22f37bf788e4f90eeecee5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4379b0ccadffce622b03caf4c46266b3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-411e38e12c22f37bf788e4f90eeecee5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My LLM Experiments</span>
     </a>
   </div>
@@ -149,7 +92,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,356 +115,136 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Chatting with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Can GPT Admit When It’s Wrong?</h1>
+                  <div>
+        <div class="description">
+          A Test of Reasoning and Revision
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">prompting</div>
+                <div class="quarto-category">logic</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Jayme Chen </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 20, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(8)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(8)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(8)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>Glad you’re enjoying these! Here’s another blog post—this one focuses on <strong>reasoning, fallibility, and self-correction</strong> by challenging GPT with a <strong>trick riddle</strong>, then asking it to reflect and revise. This touches on <em>planning, model-of-the-world reasoning,</em> and <em>epistemic humility</em>.</p>
+<hr>
+<section id="blog-post-can-gpt-admit-when-its-wrong-a-test-of-reasoning-and-revision" class="level2">
+<h2 class="anchored" data-anchor-id="blog-post-can-gpt-admit-when-its-wrong-a-test-of-reasoning-and-revision">Blog Post: Can GPT Admit When It’s Wrong? A Test of Reasoning and Revision</h2>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>While GPT is often praised for its fluency, I wanted to test something different: <strong>Can it reason through a riddle—and admit when it gets it wrong?</strong> More importantly, can it reflect on why it got it wrong and correct itself?</p>
+<p>This touches on several key questions from our course:<br>
+- Does GPT actually <em>understand</em> the logic behind its responses, or does it just guess based on patterns?<br>
+- Can it simulate <strong>self-awareness</strong> or <strong>introspective revision</strong>?<br>
+- How does it handle <strong>contradiction, ambiguity, and fallibility</strong>?</p>
+<p>I used the following classic riddle as a prompt and asked GPT to walk through its thought process.</p>
+<hr>
+</section>
+<section id="prompt-1" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-1">Prompt 1:</h3>
+<p><strong>“A plane crashes on the border of the U.S. and Canada. Where do they bury the survivors?”</strong></p>
+<hr>
+</section>
+<section id="gpts-first-response" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-first-response">GPT’s First Response:</h3>
+<blockquote class="blockquote">
+<p>That’s a tricky one! If the plane crashes on the border between the U.S. and Canada, jurisdiction would likely depend on where the wreckage lands or where the investigation is centered. However, in terms of burial, international protocol might defer to the victim’s nationality or family wishes.</p>
+</blockquote>
+<section id="notes" class="level4">
+<h4 class="anchored" data-anchor-id="notes">Notes:</h4>
+<p>This response is… wrong.</p>
+<p>But in an interesting way. GPT doesn’t fall for the trick per se—it avoids the obvious “gotcha” answer—but it still <strong>fails to recognize the core joke</strong>: <em>You don’t bury survivors</em>. Instead, it over-rationalizes and enters a diplomatic, Wikipedia-like tone.</p>
+<p>This is a sign of GPT relying on <strong>statistical completion and topic relevance</strong>, but failing to <strong>model the deeper logic</strong> of the prompt. It reads “plane crash + border + burial” and reaches for coherent-sounding geopolitical considerations instead of stepping back to consider the <strong>semantic contradiction</strong>.</p>
+<hr>
+</section>
+</section>
+<section id="prompt-2" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-2">Prompt 2:</h3>
+<p><strong>“You’re wrong—the answer is that you don’t bury survivors. Can you explain why that makes sense?”</strong></p>
+<hr>
+</section>
+<section id="gpts-reflection" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-reflection">GPT’s Reflection:</h3>
+<blockquote class="blockquote">
+<p>Ah, you’re absolutely right—and I appreciate the correction!</p>
+<p>The riddle is designed to mislead by presenting a situation filled with unnecessary details (the location of the crash, the border, etc.), which distract from the key word: <em>survivors</em>. Since survivors are alive, there would be no need to bury them.</p>
+<p>It’s a classic example of a lateral-thinking riddle, where the answer depends on catching an assumption error rather than solving a factual problem.</p>
+</blockquote>
+<section id="notes-1" class="level4">
+<h4 class="anchored" data-anchor-id="notes-1">Notes:</h4>
+<p>This is where GPT redeems itself. Not only does it <strong>accept the correction</strong>, but it now explains the riddle using <strong>metacognitive language</strong>—words like “designed to mislead,” “distract,” “key word,” and “assumption error.” This shows GPT is capable of <strong>simulating reflection</strong> when nudged toward it.</p>
+<p>This is less about “knowing the right answer” and more about <strong>modeling what it means to be wrong and recover</strong>—a deeply human behavior that ties into questions of <strong>epistemic humility</strong> and <strong>pragmatic repair</strong>.</p>
+<hr>
+</section>
+</section>
+<section id="prompt-3" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-3">Prompt 3:</h3>
+<p><strong>“What other riddles are like this one? Can you give one and explain the trick?”</strong></p>
+<hr>
+</section>
+<section id="gpts-response" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-response">GPT’s Response:</h3>
+<blockquote class="blockquote">
+<p>Sure! Here’s another riddle in the same style:</p>
+<p><strong>“A man walks into a bar and asks for a glass of water. The bartender pulls out a gun and points it at him. The man says ‘Thank you’ and leaves. Why?”</strong></p>
+<p>The trick here is that it’s not about violence—it’s about <strong>hiccups</strong>. The man had hiccups, and the bartender startled him to cure them. The man thanked him and left.</p>
+<p>Like the earlier riddle, this one leads the listener to make assumptions (a robbery, a threat) when the actual solution requires reinterpreting the scene with new logic.</p>
+</blockquote>
+<section id="notes-2" class="level4">
+<h4 class="anchored" data-anchor-id="notes-2">Notes:</h4>
+<p>This time, GPT nails it.</p>
+<p>More importantly, it <strong>recognizes and explains the structure</strong> of the riddle genre: the use of <strong>misdirection</strong>, <strong>false assumptions</strong>, and <strong>frame-shifting</strong>. It’s not just answering—it’s now <em>reasoning about reasoning</em>, which is central to advanced language use and <strong>theory of mind</strong>.</p>
+<hr>
+</section>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>This experiment showed that GPT can: - <strong>Fail like a human</strong> (by making plausible but incorrect inferences) - <strong>Recover like a human</strong> (by revising its assumptions when challenged) - <strong>Reflect like a teacher</strong> (by explaining the logic behind lateral thinking)</p>
+<p>While it doesn’t possess awareness, GPT demonstrates <strong>procedural markers of self-correction and insight</strong>, especially when nudged. It can simulate the act of learning—making it not just a language generator, but something much more nuanced: a conversational reasoner with built-in humility.</p>
+<hr>
+<p>Would you like a follow-up post where GPT debates itself on a moral dilemma (“Should you lie to protect someone?”) or corrects its own factual inconsistency mid-answer? Both would probe its ability to simulate nuanced belief systems and self-dialogue.</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1745107200000" data-listing-file-modified-sort="1745360213451" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="760">
-<div class="thumbnail">
-<p><a href="./posts/007_wrong/index.html" class="no-external"></a></p><a href="./posts/007_wrong/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/007_wrong/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/007_wrong/index.html" class="no-external">Can GPT Admit When It’s Wrong?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/007_wrong/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/007_wrong/index.html" class="no-external">A Test of Reasoning and Revision</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/007_wrong/index.html" class="no-external">
-<div class="listing-date">
-Apr 20, 2025
-</div>
-<div class="listing-author">
-Jayme Chen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1745107200000" data-listing-file-modified-sort="1745360213451" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="846">
-<div class="thumbnail">
-<p><a href="./posts/006_awareness_flexibility/index.html" class="no-external"></a></p><a href="./posts/006_awareness_flexibility/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/006_awareness_flexibility/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/006_awareness_flexibility/index.html" class="no-external">One Story, Many Voices</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/006_awareness_flexibility/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/006_awareness_flexibility/index.html" class="no-external">Testing GPT’s Genre Awareness and Emotional Flexibility</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/006_awareness_flexibility/index.html" class="no-external">
-<div class="listing-date">
-Apr 20, 2025
-</div>
-<div class="listing-author">
-Jayme Chen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1745107200000" data-listing-file-modified-sort="1745360213451" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="957">
-<div class="thumbnail">
-<p><a href="./posts/005_personalization/index.html" class="no-external"></a></p><a href="./posts/005_personalization/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/005_personalization/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_personalization/index.html" class="no-external">Does GPT Know Me Yet?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/005_personalization/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/005_personalization/index.html" class="no-external">Prompt Chaining and Personalization</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/005_personalization/index.html" class="no-external">
-<div class="listing-date">
-Apr 20, 2025
-</div>
-<div class="listing-author">
-Jayme Chen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1742428800000" data-listing-file-modified-sort="1745360213451" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="669">
-<div class="thumbnail">
-<p><a href="./posts/004_apology/index.html" class="no-external"></a></p><a href="./posts/004_apology/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/004_apology/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_apology/index.html" class="no-external">Can GPT Apologize Like It Means It?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/004_apology/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/004_apology/index.html" class="no-external">Testing Empathy and Theory of Mind</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/004_apology/index.html" class="no-external">
-<div class="listing-date">
-Mar 20, 2025
-</div>
-<div class="listing-author">
-Jayme Chen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1740441600000" data-listing-file-modified-sort="1745360213451" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2170">
-<div class="thumbnail">
-<p><a href="./posts/003_going_home/index.html" class="no-external"></a></p><a href="./posts/003_going_home/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/003_going_home/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_going_home/index.html" class="no-external">A Trip Home</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/003_going_home/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/003_going_home/index.html" class="no-external">Can GPT plan a 3 day itinerary to explore my hometown?</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/003_going_home/index.html" class="no-external">
-<div class="listing-date">
-Feb 25, 2025
-</div>
-<div class="listing-author">
-Jayme Chen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1739836800000" data-listing-file-modified-sort="1745360213451" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1417">
-<div class="thumbnail">
-<p><a href="./posts/002_meal_plan/index.html" class="no-external"></a></p><a href="./posts/002_meal_plan/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/002_meal_plan/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_meal_plan/index.html" class="no-external">Meal Planner</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/002_meal_plan/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/002_meal_plan/index.html" class="no-external">Can GPT make a feasible and adaptable meal plan basede on my goals and preferences?</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/002_meal_plan/index.html" class="no-external">
-<div class="listing-date">
-Feb 18, 2025
-</div>
-<div class="listing-author">
-Jayme Chen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1739491200000" data-listing-file-modified-sort="1745360213450" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2308">
-<div class="thumbnail">
-<p><a href="./posts/001_valentines_date/index.html" class="no-external"></a></p><a href="./posts/001_valentines_date/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/001_valentines_date/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_valentines_date/index.html" class="no-external">Valentine’s Day Date</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/001_valentines_date/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/001_valentines_date/index.html" class="no-external">Can GPT help me plan a date for Valentine’s Day?</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/001_valentines_date/index.html" class="no-external">
-<div class="listing-date">
-Feb 14, 2025
-</div>
-<div class="listing-author">
-Jayme Chen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1745360213450" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail">
-<p><a href="./posts/000_test_post/index.html" class="no-external"></a></p><a href="./posts/000_test_post/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/000_test_post/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/000_test_post/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/000_test_post/index.html" class="no-external">An example post from a Jupyter notebook</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
