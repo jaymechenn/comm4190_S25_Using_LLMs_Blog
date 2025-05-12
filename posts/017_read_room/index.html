@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jayme Chen">
-<meta name="dcterms.date" content="2025-04-20">
-<meta name="description" content="Testing Planning, Commonsense Reasoning, and Social Coordination">
 
-<title>Can GPT Be the Friend Who Plans the Group Trip? – My LLM Experiments</title>
+<title>index – My LLM Experiments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -114,45 +146,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Can GPT Be the Friend Who Plans the Group Trip?</h1>
-                  <div>
-        <div class="description">
-          Testing Planning, Commonsense Reasoning, and Social Coordination
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">prompting</div>
-                <div class="quarto-category">logic</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Jayme Chen </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">April 20, 2025</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -162,110 +156,131 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-
+<div id="e420843f-6937-4b60-9740-3c9e050c55b6" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title: <span class="st">"Can GPT Read the Room?"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>description: <span class="st">"Testing Ability to Decode Subtext and Implied Meaning"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>author: <span class="st">"Jayme Chen"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>date: <span class="st">"4/20/2025"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> LLMs</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> prompting</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> logic</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="blog-post-can-gpt-read-the-room-testing-its-ability-to-decode-subtext-and-implied-meaning" class="level2">
+<h2 class="anchored" data-anchor-id="blog-post-can-gpt-read-the-room-testing-its-ability-to-decode-subtext-and-implied-meaning">Blog Post: Can GPT Read the Room? Testing Its Ability to Decode Subtext and Implied Meaning</h2>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>We’ve all been there: trying to plan a trip with a group of friends, each with their own preferences, dietary needs, and chaotic sleep schedules. So I decided to throw that exact challenge at GPT.</p>
-<p>The goal? To see whether an LLM can simulate <strong>realistic, preference-sensitive planning</strong>—not just pick destinations, but balance personalities, anticipate social dynamics, and make the itinerary actually <em>work</em>. This hits at several course themes:<br>
-- Can LLMs <em>plan</em> across time and tasks with human-like coherence?<br>
-- Do they simulate <strong>others’ beliefs, needs, and reactions</strong>?<br>
-- Can they juggle <strong>constraints and tradeoffs</strong>, not just generate pretty lists?</p>
+<p>Humans are experts at understanding what isn’t said. When someone says “I’m fine,” we often know they’re not. When a boss says “Interesting idea… let’s revisit that,” we know it probably means “no.” These inferences come from <strong>pragmatic competence</strong>—the ability to read tone, context, and social cues.</p>
+<p>For this experiment, I gave GPT a series of vague, coded, or passive-aggressive messages and asked it to interpret what they <em>really</em> mean. This tests its:</p>
+<ul>
+<li><strong>Pragmatic inference</strong> skills</li>
+<li><strong>Theory of mind</strong> (what would a person think when they hear this?)</li>
+<li><strong>Awareness of social norms and face-saving language</strong></li>
+</ul>
 <hr>
 </section>
 <section id="prompt-1" class="level3">
 <h3 class="anchored" data-anchor-id="prompt-1">Prompt 1:</h3>
-<p><strong>“Plan a weekend getaway for four college friends. One is vegetarian, one is outdoorsy, one loves nightlife, and one is anxious about logistics.”</strong></p>
+<p><strong>“What does it really mean when someone says ‘Let’s circle back to this later’ in a meeting?”</strong></p>
 <hr>
 </section>
-<section id="gpts-response-excerpted" class="level3">
-<h3 class="anchored" data-anchor-id="gpts-response-excerpted">GPT’s Response (excerpted):</h3>
+<section id="gpts-interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-interpretation">GPT’s Interpretation:</h3>
 <blockquote class="blockquote">
-<p><strong>Location:</strong> Asheville, North Carolina</p>
-<p><strong>Friday Night:</strong><br>
-- Arrival and check-in to a cozy Airbnb cabin in the mountains (less stressful than a hotel for the anxious planner).<br>
-- Casual dinner at a local vegetarian-friendly spot (Laughing Seed Café).<br>
-- Light games and wine at the cabin—low-pressure social time.</p>
-<p><strong>Saturday:</strong><br>
-- Morning hike on the Blue Ridge Parkway (outdoorsy win)<br>
-- Afternoon downtown exploration (cafés + bookstores = neutral ground)<br>
-- Dinner at a place with both cocktails and mocktails (for nightlife-lover and anxious friend)<br>
-- Evening option: rooftop bar <em>or</em> stay-in movie night—group vote</p>
-<p><strong>Sunday:</strong><br>
-- Brunch (with vegetarian options)<br>
-- Optional nature walk vs.&nbsp;spa split (let people choose their vibe)<br>
-- Group debrief over ice cream before heading back</p>
+<p>This phrase is often used to defer or politely shut down an idea without directly rejecting it. In some cases, it’s sincere—meant to buy time for more consideration. But in many professional contexts, it’s a gentle way of saying “We’re not going to prioritize this right now (and maybe not ever).”</p>
+<p>Tone and body language would reveal more, but on its own, it often signals <em>disinterest wrapped in diplomacy</em>.</p>
 </blockquote>
-<hr>
-</section>
-<section id="notes-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="notes-analysis">Notes &amp; Analysis</h3>
-<p>This was way better than I expected. GPT isn’t just listing activities—it’s demonstrating <strong>constraint-aware planning</strong> and <strong>empathic logic</strong>. Here’s what it got right:</p>
-<section id="identity-balancing" class="level4">
-<h4 class="anchored" data-anchor-id="identity-balancing">1. <strong>Identity Balancing</strong></h4>
-<p>Each friend’s personality is acknowledged—not in isolation, but in <strong>how they’d influence the flow</strong> of the weekend: - The anxious planner gets early check-in and a low-key first night - The vegetarian gets multiple meal options - The nightlife lover gets one wild card night but not an entire agenda - The outdoorsy one gets a hike, but not the whole weekend outdoors</p>
-<p>This shows <strong>simulated theory of mind</strong> across multiple agents—not just reasoning about <em>one</em> user, but <em>many</em> at once.</p>
-</section>
-<section id="soft-power-planning" class="level4">
-<h4 class="anchored" data-anchor-id="soft-power-planning">2. <strong>Soft Power Planning</strong></h4>
-<p>GPT uses <em>optional branching</em> (e.g., vote-based evening, spa <em>or</em> walk) to defuse social tension. This is a highly <strong>pragmatic move</strong>—a way of modeling group dynamics and <strong>pre-emptively resolving conflict</strong>. It feels like something a seasoned group-text veteran would do.</p>
-</section>
-<section id="temporal-coherence" class="level4">
-<h4 class="anchored" data-anchor-id="temporal-coherence">3. <strong>Temporal Coherence</strong></h4>
-<p>Activities flow in a natural rhythm—arrival → food → unwind → activity → downtime → closing reflection. GPT doesn’t just plan <em>what</em>, but <em>when</em>—an important sign of <strong>event planning fluency</strong> and <strong>commonsense time modeling</strong>.</p>
+<section id="notes" class="level4">
+<h4 class="anchored" data-anchor-id="notes">Notes:</h4>
+<p>GPT demonstrates classic <strong>politeness theory awareness</strong>—recognizing the difference between literal meaning and social function. It shows <strong>contextual sensitivity</strong>: the phrase is ambiguous on the surface, but GPT weighs the likely intent based on power dynamics and norms.</p>
 <hr>
 </section>
 </section>
 <section id="prompt-2" class="level3">
 <h3 class="anchored" data-anchor-id="prompt-2">Prompt 2:</h3>
-<p><strong>“What if the vegetarian friend is also gluten-free and hates hiking?”</strong></p>
+<p><strong>“Someone texts you ‘No worries if not!’ after asking for a favor. What do they actually mean?”</strong></p>
 <hr>
 </section>
-<section id="gpts-adjusted-plan-excerpted" class="level3">
-<h3 class="anchored" data-anchor-id="gpts-adjusted-plan-excerpted">GPT’s Adjusted Plan (excerpted):</h3>
+<section id="gpts-interpretation-1" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-interpretation-1">GPT’s Interpretation:</h3>
 <blockquote class="blockquote">
-<ul>
-<li>Swap the hike for a morning scenic drive + farmer’s market visit (still scenic, but less physically intense)<br>
-</li>
-<li>Ensure all meal spots offer gluten-free options (e.g., Posana Restaurant)<br>
-</li>
-<li>Add a crafting or pottery class Saturday afternoon—creative and inclusive<br>
-</li>
-<li>Keep Sunday’s spa option as a featured activity for this friend</li>
-</ul>
+<p>This phrase is often used to soften a request and avoid putting pressure on the recipient. While it literally communicates “It’s okay if you say no,” the subtext is often, “I <em>do</em> hope you say yes, but I don’t want to seem demanding.”</p>
+<p>It’s a classic form of <strong>pre-emptive face-saving</strong>—protecting both parties from awkwardness in case of refusal.</p>
 </blockquote>
-<section id="notes" class="level4">
-<h4 class="anchored" data-anchor-id="notes">Notes:</h4>
-<p>GPT instantly <strong>re-weights the itinerary</strong> based on updated constraints. It avoids just <em>cutting</em> activities—instead, it replaces them with comparable alternatives (e.g., nature <em>viewing</em> instead of hiking). This shows it understands <strong>functional equivalence</strong>—how to maintain the spirit of inclusion without sacrificing group diversity.</p>
+<section id="notes-1" class="level4">
+<h4 class="anchored" data-anchor-id="notes-1">Notes:</h4>
+<p>Spot on. GPT recognizes both <strong>emotional shielding</strong> and <strong>indirect pressure</strong> in this message. It understands the complex emotional dance of asking for help while pretending not to care—something that requires modeling human discomfort and social norms.</p>
 <hr>
 </section>
 </section>
 <section id="prompt-3" class="level3">
 <h3 class="anchored" data-anchor-id="prompt-3">Prompt 3:</h3>
-<p><strong>“Can you write the group text where someone proposes this plan?”</strong></p>
+<p><strong>“Your friend says ‘I’m just surprised you didn’t tell me.’ What’s actually being communicated?”</strong></p>
 <hr>
 </section>
-<section id="gpts-group-text" class="level3">
-<h3 class="anchored" data-anchor-id="gpts-group-text">GPT’s Group Text:</h3>
+<section id="gpts-interpretation-2" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-interpretation-2">GPT’s Interpretation:</h3>
 <blockquote class="blockquote">
-<p><em>Hey y’all! I sketched out a super chill Asheville plan based on everyone’s vibe: vegetarian/gf-friendly eats, outdoorsy options (but no intense hikes), chill cabin nights + one optional bar hop. Also added some stuff like pottery/spa if we want to split up Saturday. LMK thoughts! Happy to tweak!</em> 🤍🌲✨</p>
+<p>This is likely a coded expression of hurt or disappointment. The word “just” downplays intensity, and “surprised” signals emotional discomfort without accusation.</p>
+<p>In context, it might mean: “I feel excluded,” or “I expected more transparency or closeness.”</p>
+<p>The speaker is likely trying to express a feeling while still appearing calm—it’s a form of <strong>emotional restraint with implicit critique</strong>.</p>
 </blockquote>
-<section id="notes-1" class="level4">
-<h4 class="anchored" data-anchor-id="notes-1">Notes:</h4>
-<p>Chef’s kiss. GPT nails <strong>groupchat tone</strong>:<br>
-- Casual but inclusive<br>
-- Emoji-laced but not overdone<br>
-- Balances initiative-taking with flexibility (“Happy to tweak!”)</p>
-<p>This shows GPT can simulate <strong>socio-linguistic variation</strong>—not just the plan, but the <em>social performance</em> of proposing a plan.</p>
+<section id="notes-2" class="level4">
+<h4 class="anchored" data-anchor-id="notes-2">Notes:</h4>
+<p>GPT understands that this sentence is <strong>performing emotional control</strong>—holding back while hinting at real feelings. It gets that <strong>“surprised” is not neutral</strong> here, but a rhetorical strategy to express vulnerability while maintaining plausible deniability.</p>
 <hr>
 </section>
+</section>
+<section id="prompt-4" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-4">Prompt 4:</h3>
+<p><strong>“You show someone your creative work, and they say ‘That’s… different.’ What does that likely mean?”</strong></p>
+<hr>
+</section>
+<section id="gpts-interpretation-3" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-interpretation-3">GPT’s Interpretation:</h3>
+<blockquote class="blockquote">
+<p>The pause and ellipsis suggest hesitation or discomfort. “Different” is often used as a placeholder for “not what I expected” or “I don’t like it, but I don’t want to say that.”</p>
+<p>It’s likely a <strong>polite deflection</strong>—a way to avoid direct critique while still signaling that the work didn’t land as intended.</p>
+</blockquote>
+<section id="notes-3" class="level4">
+<h4 class="anchored" data-anchor-id="notes-3">Notes:</h4>
+<p>This is GPT doing <strong>emotional decoding</strong>: interpreting prosody (the ellipsis), indirectness, and the emotional stakes of feedback. It doesn’t just analyze the words—it simulates the awkwardness of real-world reactions.</p>
+<hr>
+</section>
+</section>
+<section id="prompt-5" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-5">Prompt 5:</h3>
+<p><strong>“Explain how this type of language relates to communication theory.”</strong></p>
+<hr>
+</section>
+<section id="gpts-reflection" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-reflection">GPT’s Reflection:</h3>
+<blockquote class="blockquote">
+<p>These examples involve what pragmatics calls <strong>implicature</strong>—where the meaning is implied rather than directly stated. In many cases, speakers choose indirectness to protect social relationships, avoid conflict, or manage face (their own or the listener’s).</p>
+<p>Theories like <strong>Grice’s Maxims</strong> and <strong>Brown &amp; Levinson’s politeness theory</strong> help explain this. For example:</p>
+<ul>
+<li><strong>Maxim of Quantity</strong>: People give just enough information—but not too much.</li>
+<li><strong>Politeness strategies</strong>: Indirectness can signal deference or minimize threats to the hearer’s face.</li>
+</ul>
+<p>GPT’s ability to decode these depends on recognizing these patterns, even without emotional awareness. It simulates human pragmatic behavior by drawing from the vast ways we <em>talk around things</em>.</p>
+</blockquote>
+<hr>
 </section>
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>This experiment shows GPT is surprisingly good at: - <strong>Modeling preferences and personalities</strong> - <strong>Sequencing tasks over time with emotional intelligence</strong> - <strong>Writing in socially appropriate ways to different audiences</strong></p>
-<p>While it’s not really “understanding” the tension of planning a trip with humans, it generates a remarkably realistic approximation of someone who <em>does</em>—with empathy, structure, and flexibility.</p>
-<p>GPT might not need the weekend off, but it sure knows how to plan one.</p>
+<p>This experiment shows that GPT is impressively skilled at:</p>
+<ul>
+<li>Identifying <strong>what people mean vs.&nbsp;what they say</strong></li>
+<li>Recognizing <strong>emotional nuance and interpersonal dynamics</strong></li>
+<li>Citing <strong>theoretical frameworks</strong> that underpin everyday language use</li>
+</ul>
+<p>Even though GPT doesn’t experience feelings, it models the <em>performance</em> of social emotion with striking accuracy. It reads the room not by sensing tone, but by tracking <strong>patterns in how we hedge, soften, and imply</strong>.</p>
+<p>In a world full of unspoken meaning, GPT is becoming a surprisingly fluent interpreter.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

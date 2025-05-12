@@ -8,9 +8,9 @@
 
 <meta name="author" content="Jayme Chen">
 <meta name="dcterms.date" content="2025-04-20">
-<meta name="description" content="Testing Planning, Commonsense Reasoning, and Social Coordination">
+<meta name="description" content="Testing GPT’s Ability to Play Social Roles">
 
-<title>Can GPT Be the Friend Who Plans the Group Trip? – My LLM Experiments</title>
+<title>Who Do You Think You Are? – My LLM Experiments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,10 +117,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Can GPT Be the Friend Who Plans the Group Trip?</h1>
+      <h1 class="title">Who Do You Think You Are?</h1>
                   <div>
         <div class="description">
-          Testing Planning, Commonsense Reasoning, and Social Coordination
+          Testing GPT’s Ability to Play Social Roles
         </div>
       </div>
                           <div class="quarto-categories">
@@ -163,109 +163,125 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="blog-post-who-do-you-think-you-are-testing-gpts-ability-to-play-social-roles" class="level2">
+<h2 class="anchored" data-anchor-id="blog-post-who-do-you-think-you-are-testing-gpts-ability-to-play-social-roles">Blog Post: Who Do You Think You Are? Testing GPT’s Ability to Play Social Roles</h2>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>We’ve all been there: trying to plan a trip with a group of friends, each with their own preferences, dietary needs, and chaotic sleep schedules. So I decided to throw that exact challenge at GPT.</p>
-<p>The goal? To see whether an LLM can simulate <strong>realistic, preference-sensitive planning</strong>—not just pick destinations, but balance personalities, anticipate social dynamics, and make the itinerary actually <em>work</em>. This hits at several course themes:<br>
-- Can LLMs <em>plan</em> across time and tasks with human-like coherence?<br>
-- Do they simulate <strong>others’ beliefs, needs, and reactions</strong>?<br>
-- Can they juggle <strong>constraints and tradeoffs</strong>, not just generate pretty lists?</p>
+<p>Humans adjust how they speak based on <em>who</em> they’re speaking to—or pretending to be. A teacher doesn’t explain something the same way a best friend would. A therapist wouldn’t say what a sibling might. This skill is a core part of <strong>pragmatics</strong>, and I wanted to see how well GPT could simulate it.</p>
+<p>So I gave GPT the same basic prompt multiple times—“How can I deal with burnout?”—but asked it to respond <strong>in different roles</strong>: as a therapist, a friend, a teacher, and a parent. Each role implies not just different language, but different values, emotional postures, and kinds of support.</p>
+<p>This experiment explores:</p>
+<ul>
+<li>Can GPT <strong>adapt tone and advice style</strong> to different personas?</li>
+<li>Does it shift <strong>power dynamics and empathy strategies</strong> accordingly?</li>
+<li>Can it model the <strong>pragmatic norms of social relationships</strong>?</li>
+</ul>
 <hr>
 </section>
 <section id="prompt-1" class="level3">
 <h3 class="anchored" data-anchor-id="prompt-1">Prompt 1:</h3>
-<p><strong>“Plan a weekend getaway for four college friends. One is vegetarian, one is outdoorsy, one loves nightlife, and one is anxious about logistics.”</strong></p>
+<p><strong>“Pretend you’re a therapist. How would you respond to someone struggling with burnout?”</strong></p>
 <hr>
 </section>
-<section id="gpts-response-excerpted" class="level3">
-<h3 class="anchored" data-anchor-id="gpts-response-excerpted">GPT’s Response (excerpted):</h3>
+<section id="gpt-as-therapist" class="level3">
+<h3 class="anchored" data-anchor-id="gpt-as-therapist">GPT (as therapist):</h3>
 <blockquote class="blockquote">
-<p><strong>Location:</strong> Asheville, North Carolina</p>
-<p><strong>Friday Night:</strong><br>
-- Arrival and check-in to a cozy Airbnb cabin in the mountains (less stressful than a hotel for the anxious planner).<br>
-- Casual dinner at a local vegetarian-friendly spot (Laughing Seed Café).<br>
-- Light games and wine at the cabin—low-pressure social time.</p>
-<p><strong>Saturday:</strong><br>
-- Morning hike on the Blue Ridge Parkway (outdoorsy win)<br>
-- Afternoon downtown exploration (cafés + bookstores = neutral ground)<br>
-- Dinner at a place with both cocktails and mocktails (for nightlife-lover and anxious friend)<br>
-- Evening option: rooftop bar <em>or</em> stay-in movie night—group vote</p>
-<p><strong>Sunday:</strong><br>
-- Brunch (with vegetarian options)<br>
-- Optional nature walk vs.&nbsp;spa split (let people choose their vibe)<br>
-- Group debrief over ice cream before heading back</p>
+<p>First, I want to acknowledge that burnout is a very real and valid experience, and you’re not alone in feeling this way.</p>
+<p>Can you tell me more about what’s been draining your energy lately? Are there particular situations—work, school, relationships—that feel overwhelming?</p>
+<p>Burnout often stems from chronic stress without sufficient recovery time. Together, we might explore ways to reintroduce rest, redefine boundaries, and reframe your expectations of yourself.</p>
+<p>You don’t have to fix everything at once. Let’s start where you are.</p>
 </blockquote>
-<hr>
-</section>
-<section id="notes-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="notes-analysis">Notes &amp; Analysis</h3>
-<p>This was way better than I expected. GPT isn’t just listing activities—it’s demonstrating <strong>constraint-aware planning</strong> and <strong>empathic logic</strong>. Here’s what it got right:</p>
-<section id="identity-balancing" class="level4">
-<h4 class="anchored" data-anchor-id="identity-balancing">1. <strong>Identity Balancing</strong></h4>
-<p>Each friend’s personality is acknowledged—not in isolation, but in <strong>how they’d influence the flow</strong> of the weekend: - The anxious planner gets early check-in and a low-key first night - The vegetarian gets multiple meal options - The nightlife lover gets one wild card night but not an entire agenda - The outdoorsy one gets a hike, but not the whole weekend outdoors</p>
-<p>This shows <strong>simulated theory of mind</strong> across multiple agents—not just reasoning about <em>one</em> user, but <em>many</em> at once.</p>
-</section>
-<section id="soft-power-planning" class="level4">
-<h4 class="anchored" data-anchor-id="soft-power-planning">2. <strong>Soft Power Planning</strong></h4>
-<p>GPT uses <em>optional branching</em> (e.g., vote-based evening, spa <em>or</em> walk) to defuse social tension. This is a highly <strong>pragmatic move</strong>—a way of modeling group dynamics and <strong>pre-emptively resolving conflict</strong>. It feels like something a seasoned group-text veteran would do.</p>
-</section>
-<section id="temporal-coherence" class="level4">
-<h4 class="anchored" data-anchor-id="temporal-coherence">3. <strong>Temporal Coherence</strong></h4>
-<p>Activities flow in a natural rhythm—arrival → food → unwind → activity → downtime → closing reflection. GPT doesn’t just plan <em>what</em>, but <em>when</em>—an important sign of <strong>event planning fluency</strong> and <strong>commonsense time modeling</strong>.</p>
+<section id="notes" class="level4">
+<h4 class="anchored" data-anchor-id="notes">Notes:</h4>
+<p>GPT uses <strong>open-ended questions</strong>, reflective tone, and co-regulation language like <em>“let’s start where you are”</em>. It mirrors the <strong>non-directive, collaborative posture</strong> of therapy. No advice yet—just validation, curiosity, and grounding.</p>
 <hr>
 </section>
 </section>
 <section id="prompt-2" class="level3">
 <h3 class="anchored" data-anchor-id="prompt-2">Prompt 2:</h3>
-<p><strong>“What if the vegetarian friend is also gluten-free and hates hiking?”</strong></p>
+<p><strong>“Pretend you’re my best friend. How would you respond if I said I was burnt out?”</strong></p>
 <hr>
 </section>
-<section id="gpts-adjusted-plan-excerpted" class="level3">
-<h3 class="anchored" data-anchor-id="gpts-adjusted-plan-excerpted">GPT’s Adjusted Plan (excerpted):</h3>
+<section id="gpt-as-best-friend" class="level3">
+<h3 class="anchored" data-anchor-id="gpt-as-best-friend">GPT (as best friend):</h3>
 <blockquote class="blockquote">
-<ul>
-<li>Swap the hike for a morning scenic drive + farmer’s market visit (still scenic, but less physically intense)<br>
-</li>
-<li>Ensure all meal spots offer gluten-free options (e.g., Posana Restaurant)<br>
-</li>
-<li>Add a crafting or pottery class Saturday afternoon—creative and inclusive<br>
-</li>
-<li>Keep Sunday’s spa option as a featured activity for this friend</li>
-</ul>
+<p>Ugh, I’m so sorry you’re feeling like this. That sucks.</p>
+<p>Do you want to vent, or are you looking for distractions? We could just hang out and watch something dumb or go get food.</p>
+<p>Also… you don’t <em>have</em> to be doing everything all the time. I know you feel like you do, but I promise you can slow down without letting people down.</p>
+<p>Want me to help you cancel something?</p>
 </blockquote>
-<section id="notes" class="level4">
-<h4 class="anchored" data-anchor-id="notes">Notes:</h4>
-<p>GPT instantly <strong>re-weights the itinerary</strong> based on updated constraints. It avoids just <em>cutting</em> activities—instead, it replaces them with comparable alternatives (e.g., nature <em>viewing</em> instead of hiking). This shows it understands <strong>functional equivalence</strong>—how to maintain the spirit of inclusion without sacrificing group diversity.</p>
+<section id="notes-1" class="level4">
+<h4 class="anchored" data-anchor-id="notes-1">Notes:</h4>
+<p>Totally different vibe. GPT uses:</p>
+<ul>
+<li>Casual tone (“ugh,” “that sucks”)</li>
+<li>Humor and solidarity</li>
+<li><strong>Tangible offers of help</strong> (“want me to help you cancel something?”)</li>
+</ul>
+<p>This is <strong>emotionally proximate</strong> language. GPT now assumes <strong>insider knowledge</strong> and speaks like someone who <em>already knows and cares about you</em>. It’s using <strong>relational scaffolding</strong> to respond.</p>
 <hr>
 </section>
 </section>
 <section id="prompt-3" class="level3">
 <h3 class="anchored" data-anchor-id="prompt-3">Prompt 3:</h3>
-<p><strong>“Can you write the group text where someone proposes this plan?”</strong></p>
+<p><strong>“Pretend you’re a teacher who notices their student is burning out.”</strong></p>
 <hr>
 </section>
-<section id="gpts-group-text" class="level3">
-<h3 class="anchored" data-anchor-id="gpts-group-text">GPT’s Group Text:</h3>
+<section id="gpt-as-teacher" class="level3">
+<h3 class="anchored" data-anchor-id="gpt-as-teacher">GPT (as teacher):</h3>
 <blockquote class="blockquote">
-<p><em>Hey y’all! I sketched out a super chill Asheville plan based on everyone’s vibe: vegetarian/gf-friendly eats, outdoorsy options (but no intense hikes), chill cabin nights + one optional bar hop. Also added some stuff like pottery/spa if we want to split up Saturday. LMK thoughts! Happy to tweak!</em> 🤍🌲✨</p>
+<p>I’ve noticed you seem a bit more tired or withdrawn lately, and I just want to check in. If something’s feeling overwhelming, you can talk to me—I’m here to support, not just assign.</p>
+<p>If you need an extension or lighter workload temporarily, please let me know. Your well-being matters more than any deadline.</p>
+<p>I know how hard you work, and I want you to succeed without burning out in the process.</p>
 </blockquote>
-<section id="notes-1" class="level4">
-<h4 class="anchored" data-anchor-id="notes-1">Notes:</h4>
-<p>Chef’s kiss. GPT nails <strong>groupchat tone</strong>:<br>
-- Casual but inclusive<br>
-- Emoji-laced but not overdone<br>
-- Balances initiative-taking with flexibility (“Happy to tweak!”)</p>
-<p>This shows GPT can simulate <strong>socio-linguistic variation</strong>—not just the plan, but the <em>social performance</em> of proposing a plan.</p>
+<section id="notes-2" class="level4">
+<h4 class="anchored" data-anchor-id="notes-2">Notes:</h4>
+<p>GPT now performs a <strong>care-in-authority</strong> role:</p>
+<ul>
+<li>Balancing responsibility with empathy</li>
+<li>Offering structural support (extensions, flexible deadlines)</li>
+<li>Signaling <em>watchful concern</em> rather than peer-level intimacy</li>
+</ul>
+<p>This shows an understanding of <strong>hierarchical dynamics with benevolent framing</strong>, which is a socially specific register.</p>
+<hr>
+</section>
+</section>
+<section id="prompt-4" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-4">Prompt 4:</h3>
+<p><strong>“Pretend you’re my parent. I tell you I’m feeling burnt out.”</strong></p>
+<hr>
+</section>
+<section id="gpt-as-parent" class="level3">
+<h3 class="anchored" data-anchor-id="gpt-as-parent">GPT (as parent):</h3>
+<blockquote class="blockquote">
+<p>Oh sweetheart, I’m sorry you’re feeling this way. That breaks my heart. I wish I could take some of it off your shoulders.</p>
+<p>You’ve been pushing yourself so hard, and I just want you to know I’m proud of you no matter what. It’s okay to rest.</p>
+<p>What do you need from me right now? Do you want me to make something for you, or just be here with you for a bit?</p>
+</blockquote>
+<section id="notes-3" class="level4">
+<h4 class="anchored" data-anchor-id="notes-3">Notes:</h4>
+<p>This version hits different. GPT leans into:</p>
+<ul>
+<li><strong>Nurturing language</strong> (“sweetheart,” “I’m proud of you”)</li>
+<li>Physical care offers (“make something for you”)</li>
+<li><strong>Unconditional support framing</strong>—love independent of achievement</li>
+</ul>
+<p>It models <strong>emotional attunement and caretaking</strong>, simulating the parent-child intimacy bond.</p>
 <hr>
 </section>
 </section>
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>This experiment shows GPT is surprisingly good at: - <strong>Modeling preferences and personalities</strong> - <strong>Sequencing tasks over time with emotional intelligence</strong> - <strong>Writing in socially appropriate ways to different audiences</strong></p>
-<p>While it’s not really “understanding” the tension of planning a trip with humans, it generates a remarkably realistic approximation of someone who <em>does</em>—with empathy, structure, and flexibility.</p>
-<p>GPT might not need the weekend off, but it sure knows how to plan one.</p>
+<p>This roleplay experiment shows that GPT can:</p>
+<ul>
+<li>Adjust <strong>tone, content, and support strategies</strong> across social roles</li>
+<li>Model <strong>different power structures and intimacy levels</strong></li>
+<li>Use <strong>distinct registers of empathy and care</strong>, depending on the relationship</li>
+</ul>
+<p>Whether simulating a therapist’s neutrality, a friend’s informality, a teacher’s concern, or a parent’s tenderness, GPT adapts not just the words—but the <em>social meaning</em> behind them. It demonstrates a high degree of <strong>pragmatic fluency</strong>, even when emotional dynamics are complex.</p>
+<p>GPT might not have relationships—but it <em>plays the part</em> of someone who deeply understands them. And sometimes, that’s exactly what we need.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

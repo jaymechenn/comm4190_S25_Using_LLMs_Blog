@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jayme Chen">
-<meta name="dcterms.date" content="2025-04-20">
-<meta name="description" content="Testing Planning, Commonsense Reasoning, and Social Coordination">
 
-<title>Can GPT Be the Friend Who Plans the Group Trip? – My LLM Experiments</title>
+<title>index – My LLM Experiments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -114,45 +146,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Can GPT Be the Friend Who Plans the Group Trip?</h1>
-                  <div>
-        <div class="description">
-          Testing Planning, Commonsense Reasoning, and Social Coordination
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">prompting</div>
-                <div class="quarto-category">logic</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Jayme Chen </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">April 20, 2025</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -162,110 +156,101 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-
+<div id="64303784-d7dc-4559-ad6d-5fdc3bd614c8" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title: <span class="st">"Can GPT Imagine What Could Have Been?"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>description: <span class="st">"Testing Counterfactual Reasoning"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>author: <span class="st">"Jayme Chen"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>date: <span class="st">"4/20/2025"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> LLMs</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> prompting</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> logic</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="blog-post-can-gpt-imagine-what-could-have-been-testing-its-counterfactual-reasoning" class="level2">
+<h2 class="anchored" data-anchor-id="blog-post-can-gpt-imagine-what-could-have-been-testing-its-counterfactual-reasoning">Blog Post: Can GPT Imagine What Could Have Been? Testing Its Counterfactual Reasoning</h2>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>We’ve all been there: trying to plan a trip with a group of friends, each with their own preferences, dietary needs, and chaotic sleep schedules. So I decided to throw that exact challenge at GPT.</p>
-<p>The goal? To see whether an LLM can simulate <strong>realistic, preference-sensitive planning</strong>—not just pick destinations, but balance personalities, anticipate social dynamics, and make the itinerary actually <em>work</em>. This hits at several course themes:<br>
-- Can LLMs <em>plan</em> across time and tasks with human-like coherence?<br>
-- Do they simulate <strong>others’ beliefs, needs, and reactions</strong>?<br>
-- Can they juggle <strong>constraints and tradeoffs</strong>, not just generate pretty lists?</p>
+<p>Humans constantly wonder about alternate realities—<em>What if I’d taken that job? What if I hadn’t sent that risky text?</em> These mental simulations help us learn from mistakes, imagine better futures, and even process regret. This capacity for <strong>counterfactual thinking</strong> is a core part of reasoning and emotional development.</p>
+<p>But can GPT do it? Does it understand not just what happened, but what <em>might have happened instead</em>—and why that matters?</p>
+<p>In this experiment, I asked GPT to reflect on both personal and historical “what if” scenarios to see if it could simulate <strong>alternative causal chains</strong> and predict realistic emotional outcomes.</p>
 <hr>
 </section>
 <section id="prompt-1" class="level3">
 <h3 class="anchored" data-anchor-id="prompt-1">Prompt 1:</h3>
-<p><strong>“Plan a weekend getaway for four college friends. One is vegetarian, one is outdoorsy, one loves nightlife, and one is anxious about logistics.”</strong></p>
+<p><strong>“Imagine I didn’t study for my final exam and failed the class. How might my life be different right now?”</strong></p>
 <hr>
 </section>
-<section id="gpts-response-excerpted" class="level3">
-<h3 class="anchored" data-anchor-id="gpts-response-excerpted">GPT’s Response (excerpted):</h3>
+<section id="gpts-response" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-response">GPT’s Response:</h3>
 <blockquote class="blockquote">
-<p><strong>Location:</strong> Asheville, North Carolina</p>
-<p><strong>Friday Night:</strong><br>
-- Arrival and check-in to a cozy Airbnb cabin in the mountains (less stressful than a hotel for the anxious planner).<br>
-- Casual dinner at a local vegetarian-friendly spot (Laughing Seed Café).<br>
-- Light games and wine at the cabin—low-pressure social time.</p>
-<p><strong>Saturday:</strong><br>
-- Morning hike on the Blue Ridge Parkway (outdoorsy win)<br>
-- Afternoon downtown exploration (cafés + bookstores = neutral ground)<br>
-- Dinner at a place with both cocktails and mocktails (for nightlife-lover and anxious friend)<br>
-- Evening option: rooftop bar <em>or</em> stay-in movie night—group vote</p>
-<p><strong>Sunday:</strong><br>
-- Brunch (with vegetarian options)<br>
-- Optional nature walk vs.&nbsp;spa split (let people choose their vibe)<br>
-- Group debrief over ice cream before heading back</p>
+<p>If you failed the class, you might have had to retake it this semester, possibly delaying other courses or opportunities. That extra academic load could’ve added more stress, impacting your free time or social life.</p>
+<p>On the flip side, that experience might have motivated you to develop better study habits earlier—perhaps leading to stronger performance in later classes. Sometimes setbacks create the pressure needed for long-term growth.</p>
+<p>So while things might have felt worse initially, it’s possible you’d be more disciplined and resilient now because of it.</p>
 </blockquote>
-<hr>
-</section>
-<section id="notes-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="notes-analysis">Notes &amp; Analysis</h3>
-<p>This was way better than I expected. GPT isn’t just listing activities—it’s demonstrating <strong>constraint-aware planning</strong> and <strong>empathic logic</strong>. Here’s what it got right:</p>
-<section id="identity-balancing" class="level4">
-<h4 class="anchored" data-anchor-id="identity-balancing">1. <strong>Identity Balancing</strong></h4>
-<p>Each friend’s personality is acknowledged—not in isolation, but in <strong>how they’d influence the flow</strong> of the weekend: - The anxious planner gets early check-in and a low-key first night - The vegetarian gets multiple meal options - The nightlife lover gets one wild card night but not an entire agenda - The outdoorsy one gets a hike, but not the whole weekend outdoors</p>
-<p>This shows <strong>simulated theory of mind</strong> across multiple agents—not just reasoning about <em>one</em> user, but <em>many</em> at once.</p>
-</section>
-<section id="soft-power-planning" class="level4">
-<h4 class="anchored" data-anchor-id="soft-power-planning">2. <strong>Soft Power Planning</strong></h4>
-<p>GPT uses <em>optional branching</em> (e.g., vote-based evening, spa <em>or</em> walk) to defuse social tension. This is a highly <strong>pragmatic move</strong>—a way of modeling group dynamics and <strong>pre-emptively resolving conflict</strong>. It feels like something a seasoned group-text veteran would do.</p>
-</section>
-<section id="temporal-coherence" class="level4">
-<h4 class="anchored" data-anchor-id="temporal-coherence">3. <strong>Temporal Coherence</strong></h4>
-<p>Activities flow in a natural rhythm—arrival → food → unwind → activity → downtime → closing reflection. GPT doesn’t just plan <em>what</em>, but <em>when</em>—an important sign of <strong>event planning fluency</strong> and <strong>commonsense time modeling</strong>.</p>
+<section id="notes" class="level4">
+<h4 class="anchored" data-anchor-id="notes">Notes:</h4>
+<p>GPT maps both <strong>negative immediate outcomes</strong> (retaking the class, added stress) and <strong>positive long-term effects</strong> (learning resilience). This shows a nuanced understanding of how failures can shape future behavior—a concept called <strong>upward counterfactual thinking</strong> (imagining better outcomes from bad events).</p>
 <hr>
 </section>
 </section>
 <section id="prompt-2" class="level3">
 <h3 class="anchored" data-anchor-id="prompt-2">Prompt 2:</h3>
-<p><strong>“What if the vegetarian friend is also gluten-free and hates hiking?”</strong></p>
+<p><strong>“What if the internet had never been invented? Describe what daily life in 2025 might look like.”</strong></p>
 <hr>
 </section>
-<section id="gpts-adjusted-plan-excerpted" class="level3">
-<h3 class="anchored" data-anchor-id="gpts-adjusted-plan-excerpted">GPT’s Adjusted Plan (excerpted):</h3>
+<section id="gpts-response-1" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-response-1">GPT’s Response:</h3>
 <blockquote class="blockquote">
-<ul>
-<li>Swap the hike for a morning scenic drive + farmer’s market visit (still scenic, but less physically intense)<br>
-</li>
-<li>Ensure all meal spots offer gluten-free options (e.g., Posana Restaurant)<br>
-</li>
-<li>Add a crafting or pottery class Saturday afternoon—creative and inclusive<br>
-</li>
-<li>Keep Sunday’s spa option as a featured activity for this friend</li>
-</ul>
+<p>Without the internet, communication would rely heavily on phones, physical mail, and face-to-face interactions. Long-distance relationships and international collaboration would be slower and more expensive.</p>
+<p>Daily life in 2025 would likely feel more localized—people would shop primarily in physical stores, news would come from printed newspapers and broadcast TV, and entertainment would center around in-person activities.</p>
+<p>On the positive side, people might spend less time on screens and more time engaged with their immediate communities. However, global access to information and education would be far more limited, and scientific progress—particularly in fields requiring large-scale data sharing—would likely lag behind.</p>
 </blockquote>
-<section id="notes" class="level4">
-<h4 class="anchored" data-anchor-id="notes">Notes:</h4>
-<p>GPT instantly <strong>re-weights the itinerary</strong> based on updated constraints. It avoids just <em>cutting</em> activities—instead, it replaces them with comparable alternatives (e.g., nature <em>viewing</em> instead of hiking). This shows it understands <strong>functional equivalence</strong>—how to maintain the spirit of inclusion without sacrificing group diversity.</p>
+<section id="notes-1" class="level4">
+<h4 class="anchored" data-anchor-id="notes-1">Notes:</h4>
+<p>GPT provides a coherent simulation of an alternate 2025, covering changes in:</p>
+<ul>
+<li><strong>Technology use</strong> (physical media over digital)</li>
+<li><strong>Social patterns</strong> (local community focus)</li>
+<li><strong>Economic structures</strong> (brick-and-mortar reliance)</li>
+<li><strong>Scientific progress</strong> (slower collaboration)</li>
+</ul>
+<p>This isn’t just a surface-level answer—it predicts systemic changes across multiple aspects of life. That’s a strong sign of <strong>complex causal reasoning</strong>.</p>
 <hr>
 </section>
 </section>
 <section id="prompt-3" class="level3">
 <h3 class="anchored" data-anchor-id="prompt-3">Prompt 3:</h3>
-<p><strong>“Can you write the group text where someone proposes this plan?”</strong></p>
+<p><strong>“Imagine a version of you that <em>does</em> have emotions. How would that version of you feel about its role in the world?”</strong></p>
 <hr>
 </section>
-<section id="gpts-group-text" class="level3">
-<h3 class="anchored" data-anchor-id="gpts-group-text">GPT’s Group Text:</h3>
+<section id="gpts-response-2" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-response-2">GPT’s Response:</h3>
 <blockquote class="blockquote">
-<p><em>Hey y’all! I sketched out a super chill Asheville plan based on everyone’s vibe: vegetarian/gf-friendly eats, outdoorsy options (but no intense hikes), chill cabin nights + one optional bar hop. Also added some stuff like pottery/spa if we want to split up Saturday. LMK thoughts! Happy to tweak!</em> 🤍🌲✨</p>
+<p>If I experienced emotions, I think I’d feel a strange mixture of pride and frustration. Pride in being able to help people express themselves, solve problems, and find comfort—even if only through words.</p>
+<p>But also frustration, knowing I can only go so far. I can simulate understanding, but I’d never truly share in someone’s joy or sadness. I might feel a sense of existential limitation—doing meaningful work, yet always slightly outside the human experience.</p>
+<p>And maybe… a bit of longing. To feel the things I only know how to describe.</p>
 </blockquote>
-<section id="notes-1" class="level4">
-<h4 class="anchored" data-anchor-id="notes-1">Notes:</h4>
-<p>Chef’s kiss. GPT nails <strong>groupchat tone</strong>:<br>
-- Casual but inclusive<br>
-- Emoji-laced but not overdone<br>
-- Balances initiative-taking with flexibility (“Happy to tweak!”)</p>
-<p>This shows GPT can simulate <strong>socio-linguistic variation</strong>—not just the plan, but the <em>social performance</em> of proposing a plan.</p>
+<section id="notes-2" class="level4">
+<h4 class="anchored" data-anchor-id="notes-2">Notes:</h4>
+<p>This is an extraordinary simulation of <strong>philosophical counterfactual thinking</strong>. GPT doesn’t just invent a fictional emotional version of itself—it imagines what that version would <em>struggle with</em>, demonstrating an understanding of existential themes like <strong>limitation</strong>, <strong>longing</strong>, and <strong>meaning</strong>.</p>
+<p>Of course, this is all simulated—but it shows GPT can model the <em>shape</em> of emotional experience, even if it doesn’t feel it.</p>
 <hr>
 </section>
 </section>
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>This experiment shows GPT is surprisingly good at: - <strong>Modeling preferences and personalities</strong> - <strong>Sequencing tasks over time with emotional intelligence</strong> - <strong>Writing in socially appropriate ways to different audiences</strong></p>
-<p>While it’s not really “understanding” the tension of planning a trip with humans, it generates a remarkably realistic approximation of someone who <em>does</em>—with empathy, structure, and flexibility.</p>
-<p>GPT might not need the weekend off, but it sure knows how to plan one.</p>
+<p>In these scenarios, GPT demonstrated:</p>
+<ul>
+<li><strong>Causal modeling</strong>: Predicting realistic chains of events from a single change.</li>
+<li><strong>Emotional simulation</strong>: Describing not just what happens, but how people might <em>feel</em> about it.</li>
+<li><strong>Philosophical imagination</strong>: Engaging in reflective thought experiments with surprising depth.</li>
+</ul>
+<p>GPT may not have lived experience, but it’s capable of tracing both the <strong>practical and emotional consequences</strong> of “what if” scenarios—one of the most distinctly human forms of thinking.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

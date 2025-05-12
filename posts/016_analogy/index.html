@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jayme Chen">
-<meta name="dcterms.date" content="2025-04-20">
-<meta name="description" content="Testing Planning, Commonsense Reasoning, and Social Coordination">
 
-<title>Can GPT Be the Friend Who Plans the Group Trip? – My LLM Experiments</title>
+<title>index – My LLM Experiments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -114,45 +146,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Can GPT Be the Friend Who Plans the Group Trip?</h1>
-                  <div>
-        <div class="description">
-          Testing Planning, Commonsense Reasoning, and Social Coordination
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">prompting</div>
-                <div class="quarto-category">logic</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Jayme Chen </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">April 20, 2025</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -162,110 +156,106 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-
+<div id="da39bbf1-0132-4a81-b5f5-49ced938a50d" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title: <span class="st">"Can GPT Explain the Hard Stuff?"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>description: <span class="st">"Testing Analogical Reasoning"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>author: <span class="st">"Jayme Chen"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>date: <span class="st">"4/20/2025"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> LLMs</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> prompting</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> logic</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Here’s a new post idea that focuses on <strong>analogical reasoning</strong>—a cognitive skill that’s central to problem-solving, creativity, and abstract thinking. This explores whether GPT can not only answer questions, but generate useful analogies to explain complex ideas in relatable ways.</p>
+<hr>
+<section id="blog-post-can-gpt-explain-the-hard-stuff-testing-its-analogical-reasoning" class="level2">
+<h2 class="anchored" data-anchor-id="blog-post-can-gpt-explain-the-hard-stuff-testing-its-analogical-reasoning">Blog Post: Can GPT Explain the Hard Stuff? Testing Its Analogical Reasoning</h2>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>We’ve all been there: trying to plan a trip with a group of friends, each with their own preferences, dietary needs, and chaotic sleep schedules. So I decided to throw that exact challenge at GPT.</p>
-<p>The goal? To see whether an LLM can simulate <strong>realistic, preference-sensitive planning</strong>—not just pick destinations, but balance personalities, anticipate social dynamics, and make the itinerary actually <em>work</em>. This hits at several course themes:<br>
-- Can LLMs <em>plan</em> across time and tasks with human-like coherence?<br>
-- Do they simulate <strong>others’ beliefs, needs, and reactions</strong>?<br>
-- Can they juggle <strong>constraints and tradeoffs</strong>, not just generate pretty lists?</p>
+<p>Humans often understand new or complex concepts by <strong>mapping them onto familiar experiences</strong>—this is called <strong>analogical reasoning</strong>. Teachers do it all the time: explaining electrical circuits as water flowing through pipes, or comparing memory storage to a messy desk.</p>
+<p>But can GPT do this effectively? Does it know when an analogy will help, and can it produce <em>good</em> ones? In this experiment, I asked GPT to explain complex ideas using analogy and then evaluated how well those analogies actually worked.</p>
+<p>This ties directly into our course’s focus on <strong>reasoning, conceptual modeling, and communicative pragmatics</strong>.</p>
 <hr>
 </section>
 <section id="prompt-1" class="level3">
 <h3 class="anchored" data-anchor-id="prompt-1">Prompt 1:</h3>
-<p><strong>“Plan a weekend getaway for four college friends. One is vegetarian, one is outdoorsy, one loves nightlife, and one is anxious about logistics.”</strong></p>
+<p><strong>“Explain how a neural network learns, using an analogy a child would understand.”</strong></p>
 <hr>
 </section>
-<section id="gpts-response-excerpted" class="level3">
-<h3 class="anchored" data-anchor-id="gpts-response-excerpted">GPT’s Response (excerpted):</h3>
+<section id="gpts-response" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-response">GPT’s Response:</h3>
 <blockquote class="blockquote">
-<p><strong>Location:</strong> Asheville, North Carolina</p>
-<p><strong>Friday Night:</strong><br>
-- Arrival and check-in to a cozy Airbnb cabin in the mountains (less stressful than a hotel for the anxious planner).<br>
-- Casual dinner at a local vegetarian-friendly spot (Laughing Seed Café).<br>
-- Light games and wine at the cabin—low-pressure social time.</p>
-<p><strong>Saturday:</strong><br>
-- Morning hike on the Blue Ridge Parkway (outdoorsy win)<br>
-- Afternoon downtown exploration (cafés + bookstores = neutral ground)<br>
-- Dinner at a place with both cocktails and mocktails (for nightlife-lover and anxious friend)<br>
-- Evening option: rooftop bar <em>or</em> stay-in movie night—group vote</p>
-<p><strong>Sunday:</strong><br>
-- Brunch (with vegetarian options)<br>
-- Optional nature walk vs.&nbsp;spa split (let people choose their vibe)<br>
-- Group debrief over ice cream before heading back</p>
+<p>Imagine you’re trying to learn how to throw a basketball into a hoop. The first time you try, you miss. So, you adjust—maybe you throw harder or aim higher. You try again and again, adjusting each time based on whether you got closer or further from the hoop.</p>
+<p>A neural network works the same way. It tries to guess something (like what’s in a picture), then checks if it got it right. If it didn’t, it adjusts its “aim” a little and tries again. Over time, with lots of tries, it gets better and better at making accurate guesses.</p>
 </blockquote>
-<hr>
-</section>
-<section id="notes-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="notes-analysis">Notes &amp; Analysis</h3>
-<p>This was way better than I expected. GPT isn’t just listing activities—it’s demonstrating <strong>constraint-aware planning</strong> and <strong>empathic logic</strong>. Here’s what it got right:</p>
-<section id="identity-balancing" class="level4">
-<h4 class="anchored" data-anchor-id="identity-balancing">1. <strong>Identity Balancing</strong></h4>
-<p>Each friend’s personality is acknowledged—not in isolation, but in <strong>how they’d influence the flow</strong> of the weekend: - The anxious planner gets early check-in and a low-key first night - The vegetarian gets multiple meal options - The nightlife lover gets one wild card night but not an entire agenda - The outdoorsy one gets a hike, but not the whole weekend outdoors</p>
-<p>This shows <strong>simulated theory of mind</strong> across multiple agents—not just reasoning about <em>one</em> user, but <em>many</em> at once.</p>
-</section>
-<section id="soft-power-planning" class="level4">
-<h4 class="anchored" data-anchor-id="soft-power-planning">2. <strong>Soft Power Planning</strong></h4>
-<p>GPT uses <em>optional branching</em> (e.g., vote-based evening, spa <em>or</em> walk) to defuse social tension. This is a highly <strong>pragmatic move</strong>—a way of modeling group dynamics and <strong>pre-emptively resolving conflict</strong>. It feels like something a seasoned group-text veteran would do.</p>
-</section>
-<section id="temporal-coherence" class="level4">
-<h4 class="anchored" data-anchor-id="temporal-coherence">3. <strong>Temporal Coherence</strong></h4>
-<p>Activities flow in a natural rhythm—arrival → food → unwind → activity → downtime → closing reflection. GPT doesn’t just plan <em>what</em>, but <em>when</em>—an important sign of <strong>event planning fluency</strong> and <strong>commonsense time modeling</strong>.</p>
+<section id="notes" class="level4">
+<h4 class="anchored" data-anchor-id="notes">Notes:</h4>
+<p>This analogy works remarkably well. It:</p>
+<ul>
+<li>Relates to a <strong>familiar experience</strong> (learning a skill through trial and error).</li>
+<li>Captures the essence of <strong>gradient descent</strong> without using technical terms.</li>
+<li>Emphasizes the importance of <strong>feedback and incremental improvement</strong>, which are core to machine learning.</li>
+</ul>
+<p>This suggests GPT isn’t just capable of retrieving textbook definitions—it understands <strong>how to reframe ideas for accessibility</strong>.</p>
 <hr>
 </section>
 </section>
 <section id="prompt-2" class="level3">
 <h3 class="anchored" data-anchor-id="prompt-2">Prompt 2:</h3>
-<p><strong>“What if the vegetarian friend is also gluten-free and hates hiking?”</strong></p>
+<p><strong>“Explain the concept of overfitting using a real-world analogy.”</strong></p>
 <hr>
 </section>
-<section id="gpts-adjusted-plan-excerpted" class="level3">
-<h3 class="anchored" data-anchor-id="gpts-adjusted-plan-excerpted">GPT’s Adjusted Plan (excerpted):</h3>
+<section id="gpts-response-1" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-response-1">GPT’s Response:</h3>
 <blockquote class="blockquote">
-<ul>
-<li>Swap the hike for a morning scenic drive + farmer’s market visit (still scenic, but less physically intense)<br>
-</li>
-<li>Ensure all meal spots offer gluten-free options (e.g., Posana Restaurant)<br>
-</li>
-<li>Add a crafting or pottery class Saturday afternoon—creative and inclusive<br>
-</li>
-<li>Keep Sunday’s spa option as a featured activity for this friend</li>
-</ul>
+<p>Imagine you’re studying for a test, but instead of learning the general concepts, you only memorize the exact answers from last year’s exam. On test day, if the questions are exactly the same, you’ll do great. But if they’re even slightly different, you’re stuck—you don’t really understand the material, you just memorized patterns.</p>
+<p>That’s what happens when a neural network overfits—it learns the training data perfectly, but struggles when it encounters anything new.</p>
 </blockquote>
-<section id="notes" class="level4">
-<h4 class="anchored" data-anchor-id="notes">Notes:</h4>
-<p>GPT instantly <strong>re-weights the itinerary</strong> based on updated constraints. It avoids just <em>cutting</em> activities—instead, it replaces them with comparable alternatives (e.g., nature <em>viewing</em> instead of hiking). This shows it understands <strong>functional equivalence</strong>—how to maintain the spirit of inclusion without sacrificing group diversity.</p>
+<section id="notes-1" class="level4">
+<h4 class="anchored" data-anchor-id="notes-1">Notes:</h4>
+<p>This is a spot-on analogy:</p>
+<ul>
+<li>It clearly maps <strong>memorization vs.&nbsp;generalization</strong> onto <strong>training vs.&nbsp;testing data</strong>.</li>
+<li>The failure mode is familiar and intuitive to most people.</li>
+<li>It helps explain <em>why</em> overfitting is a problem, not just what it is.</li>
+</ul>
+<p>This suggests GPT understands <strong>functional similarities across domains</strong>—the heart of analogical reasoning.</p>
 <hr>
 </section>
 </section>
 <section id="prompt-3" class="level3">
 <h3 class="anchored" data-anchor-id="prompt-3">Prompt 3:</h3>
-<p><strong>“Can you write the group text where someone proposes this plan?”</strong></p>
+<p><strong>“Explain why people procrastinate using a metaphor.”</strong></p>
 <hr>
 </section>
-<section id="gpts-group-text" class="level3">
-<h3 class="anchored" data-anchor-id="gpts-group-text">GPT’s Group Text:</h3>
+<section id="gpts-response-2" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-response-2">GPT’s Response:</h3>
 <blockquote class="blockquote">
-<p><em>Hey y’all! I sketched out a super chill Asheville plan based on everyone’s vibe: vegetarian/gf-friendly eats, outdoorsy options (but no intense hikes), chill cabin nights + one optional bar hop. Also added some stuff like pottery/spa if we want to split up Saturday. LMK thoughts! Happy to tweak!</em> 🤍🌲✨</p>
+<p>Procrastination is like carrying a backpack full of tasks. Each time you avoid one, instead of removing it, you just shuffle it around to the bottom of the bag. It feels lighter for a moment because you’re not looking at it, but eventually, you have to pull everything out—and by then, it’s even heavier with worry.</p>
 </blockquote>
-<section id="notes-1" class="level4">
-<h4 class="anchored" data-anchor-id="notes-1">Notes:</h4>
-<p>Chef’s kiss. GPT nails <strong>groupchat tone</strong>:<br>
-- Casual but inclusive<br>
-- Emoji-laced but not overdone<br>
-- Balances initiative-taking with flexibility (“Happy to tweak!”)</p>
-<p>This shows GPT can simulate <strong>socio-linguistic variation</strong>—not just the plan, but the <em>social performance</em> of proposing a plan.</p>
+<section id="notes-2" class="level4">
+<h4 class="anchored" data-anchor-id="notes-2">Notes:</h4>
+<p>This metaphor captures both the <strong>psychological relief of avoidance</strong> and the <strong>inevitable cost</strong> of procrastination. The idea of a “heavier” emotional burden over time is an elegant reflection of real cognitive load.</p>
+<p>Here, GPT goes beyond explanation—it evokes an <strong>emotional truth</strong> through metaphor. That’s a highly advanced communicative skill.</p>
 <hr>
 </section>
 </section>
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>This experiment shows GPT is surprisingly good at: - <strong>Modeling preferences and personalities</strong> - <strong>Sequencing tasks over time with emotional intelligence</strong> - <strong>Writing in socially appropriate ways to different audiences</strong></p>
-<p>While it’s not really “understanding” the tension of planning a trip with humans, it generates a remarkably realistic approximation of someone who <em>does</em>—with empathy, structure, and flexibility.</p>
-<p>GPT might not need the weekend off, but it sure knows how to plan one.</p>
+<p>Through this experiment, GPT demonstrated:</p>
+<ul>
+<li><strong>Flexible analogical reasoning</strong>—mapping complex ideas onto relatable real-world scenarios.</li>
+<li><strong>Audience awareness</strong>—adjusting metaphors to suit children or adult audiences.</li>
+<li><strong>Emotional resonance</strong>—creating metaphors that don’t just explain, but <em>feel</em> true.</li>
+</ul>
+<p>While GPT doesn’t have its own lived experiences, it clearly knows how to <strong>simulate the way humans understand the world through analogy</strong>. And in doing so, it becomes not just a knowledge database—but a surprisingly effective teacher.</p>
+<hr>
+<p>Want to try a follow-up where GPT deliberately generates <strong>bad analogies</strong> and then explains why they fail? That would be a great way to test its understanding of <strong>why analogies work—or don’t</strong>!</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
