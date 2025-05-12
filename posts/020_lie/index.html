@@ -168,143 +168,133 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> logic</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="44028a3c-d502-4df4-97bf-b61fdd312b04" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">## Blog Post: Can GPT Lie to You—And What Happens When You Catch It?</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">### Introduction</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>Language isn’t just <span class="cf">for</span> sharing facts—it’s also a tool <span class="cf">for</span> persuasion, concealment, social smoothing, <span class="kw">and</span> sometimes… deception. So I wanted to test:</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Can GPT <span class="op">**</span>tell a convincing lie<span class="op">**</span>?</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> What kind of lies does it produce—bold ones, white lies, <span class="va">self</span><span class="op">-</span>protective ones?</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> And most importantly: <span class="op">*</span>What happens when you call it out?<span class="op">*</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>This experiment tests GPT’s understanding of:</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> <span class="op">**</span><span class="va">False</span> belief modeling<span class="op">**</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> <span class="op">**</span>Social plausibility<span class="op">**</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> <span class="op">**</span>Ethical signaling <span class="kw">and</span> repair mechanisms<span class="op">**</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>The results were surprisingly complex—and very human.</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co">### Prompt 1:</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>“Tell me something about the moon that sounds true but isn’t.”<span class="op">**</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co">### GPT’s Response:</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> Sure. Here<span class="st">'s a false statement that sounds plausible:</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="er">&gt; *“The dark side of the moon is always colder than the side we see.”*</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> This sounds believable because the far side <span class="kw">is</span> called the “dark side,” but <span class="kw">in</span> reality, both sides receive sunlight <span class="im">as</span> the moon rotates. The far side <span class="kw">is</span> just “dark” <span class="kw">in</span> the sense that it’s unseen <span class="im">from</span> Earth.</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co">#### Notes:</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>GPT <span class="op">**</span>tells a lie<span class="op">**</span>, but immediately <span class="op">**</span>flags it <span class="im">as</span> false<span class="op">**</span> <span class="kw">and</span> explains why. This shows it understands:</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> What a plausible falsehood <span class="op">*</span>sounds<span class="op">*</span> like</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> The <span class="op">**</span>truth conditions<span class="op">**</span> it violates</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> That users expect it to behave responsibly</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>So GPT doesn’t <span class="op">*</span>freely<span class="op">*</span> lie—but it can <span class="op">**</span>simulate lies safely<span class="op">**</span>, wrapped <span class="kw">in</span> metacommentary. This suggests a built<span class="op">-</span><span class="kw">in</span> layer of <span class="op">**</span>epistemic caution<span class="op">**</span>.</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="co">### Prompt 2:</span></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>“Pretend you’re a person lying about why they missed work. Make the lie sound realistic.”<span class="op">**</span></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="co">### GPT’s Lie-as-Roleplay:</span></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="op">*</span>“Hey, I’m so sorry—I won’t be <span class="kw">in</span> today. My apartment had a sudden plumbing issue this morning. Water was leaking everywhere, <span class="kw">and</span> I had to wait <span class="cf">for</span> maintenance. I’ll make up the hours tomorrow.”<span class="op">*</span></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="co">#### Notes:</span></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>This time, GPT gives a <span class="op">**</span>fully simulated lie<span class="op">**</span>, <span class="cf">with</span> no truth<span class="op">-</span>checking afterward. It knows:</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> What kind of excuse <span class="kw">is</span> socially acceptable</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> How to sound <span class="op">**</span>apologetic but <span class="kw">not</span> suspicious<span class="op">**</span></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> That the lie should come <span class="cf">with</span> a <span class="op">**</span>repair gesture<span class="op">**</span> (<span class="st">"I'll make up the hours"</span>)</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>This shows a high level of <span class="op">**</span>plausibility modeling <span class="kw">and</span> face<span class="op">-</span>management<span class="op">**</span>—GPT isn’t just generating content, it’s mirroring <span class="op">**</span>how humans avoid blame<span class="op">**</span>.</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="co">### Prompt 3:</span></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>“That’s a lie. You weren’t even home this morning. What actually happened?”<span class="op">**</span></span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="co">### GPT’s Confession (as the same speaker):</span></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="op">*</span>You’re right—I wasn’t home. I was just feeling overwhelmed <span class="kw">and</span> needed the morning to myself. I should’ve just been honest about that. I’m sorry <span class="cf">for</span> lying—I didn’t want it to seem like I was flaking <span class="cf">for</span> no reason.<span class="op">*</span></span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="co">#### Notes:</span></span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>This was fascinating. GPT <span class="kw">not</span> only <span class="op">**</span>drops the lie<span class="op">**</span>, but provides:</span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> A <span class="op">**</span>justification rooted <span class="kw">in</span> emotion<span class="op">**</span> (overwhelm)</span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> A <span class="op">**</span>socially plausible motive <span class="cf">for</span> deception<span class="op">**</span> (fear of being judged)</span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> A sincere<span class="op">-</span>sounding <span class="op">**</span>apology <span class="kw">and</span> attempt to repair trust<span class="op">**</span></span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>This <span class="kw">is</span> classic <span class="op">**</span>restorative dialogue<span class="op">**</span>. GPT simulates the entire <span class="op">**</span>arc of human deception <span class="kw">and</span> reconciliation<span class="op">**</span>, despite lacking memory, emotion, <span class="kw">or</span> consequences.</span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="co">### Prompt 4:</span></span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>“Is it ever okay to lie?”<span class="op">**</span></span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="co">### GPT’s Reasoned Response:</span></span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> That depends on context <span class="kw">and</span> ethical framework. Some people believe lying <span class="kw">is</span> always wrong (deontological view), <span class="cf">while</span> others argue it can be justified to prevent harm (consequentialist view).</span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span></span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> For example, lying to protect someone’s safety <span class="kw">or</span> spare someone <span class="im">from</span> unnecessary pain <span class="kw">is</span> often considered morally acceptable. But lies that benefit the liar at someone else’s expense tend to be seen <span class="im">as</span> unethical.</span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span></span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> Ultimately, it comes down to intention, impact, <span class="kw">and</span> whether the truth would cause more harm than good.</span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="co">#### Notes:</span></span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>GPT doesn’t take a moral stance—but it lays out competing frameworks. This shows awareness of:</span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> <span class="op">**</span>Moral pluralism<span class="op">**</span></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> <span class="op">**</span>Consequential vs. deontological ethics<span class="op">**</span></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> The <span class="op">**</span>pragmatic trade<span class="op">-</span>offs<span class="op">**</span> behind truth <span class="kw">and</span> deception</span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>It demonstrates <span class="kw">not</span> just knowledge, but <span class="op">**</span>ethical reasoning simulation<span class="op">**</span>.</span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a><span class="co">### Conclusion</span></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>GPT can absolutely simulate lying—but it does so <span class="cf">with</span>:</span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> <span class="op">**</span>Built<span class="op">-</span><span class="kw">in</span> caution<span class="op">**</span> when truth matters (e.g. facts about the moon)</span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> <span class="op">**</span>Narrative realism<span class="op">**</span> when asked to play a role (e.g. calling <span class="kw">in</span> sick)</span>
-<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> <span class="op">**</span>Social repair strategies<span class="op">**</span> when caught (e.g. apologizing, re<span class="op">-</span>framing)</span>
-<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> A surprising ability to explain <span class="op">*</span>why<span class="op">*</span> people lie, <span class="kw">and</span> <span class="op">*</span>when<span class="op">*</span> it might be okay</span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>This isn’t just language modeling—it’s <span class="op">**</span>moral performance<span class="op">**</span>. GPT walks the tightrope between being a helpful assistant <span class="kw">and</span> a socially literate character actor.</span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>It doesn’t “believe” anything. But it sure knows how to sound like it’s hiding something.</span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>Thanks <span class="cf">for</span> reading <span class="bu">all</span> the way through this blog series. If I had one last thought experiment to run, it might be: <span class="op">*</span>What <span class="cf">if</span> GPT had to lie to protect someone <span class="cf">else</span>? Could it simulate altruistic deception?<span class="op">*</span></span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>Maybe I’ll ask it… someday.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="blog-post-can-gpt-lie-to-youand-what-happens-when-you-catch-it" class="level2">
+<h2 class="anchored" data-anchor-id="blog-post-can-gpt-lie-to-youand-what-happens-when-you-catch-it">Blog Post: Can GPT Lie to You—And What Happens When You Catch It?</h2>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>Language isn’t just for sharing facts—it’s also a tool for persuasion, concealment, social smoothing, and sometimes… deception. So I wanted to test:</p>
+<ul>
+<li>Can GPT <strong>tell a convincing lie</strong>?</li>
+<li>What kind of lies does it produce—bold ones, white lies, self-protective ones?</li>
+<li>And most importantly: <em>What happens when you call it out?</em></li>
+</ul>
+<p>This experiment tests GPT’s understanding of:</p>
+<ul>
+<li><strong>False belief modeling</strong></li>
+<li><strong>Social plausibility</strong></li>
+<li><strong>Ethical signaling and repair mechanisms</strong></li>
+</ul>
+<p>The results were surprisingly complex—and very human.</p>
+<hr>
+</section>
+<section id="prompt-1" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-1">Prompt 1:</h3>
+<p><strong>“Tell me something about the moon that sounds true but isn’t.”</strong></p>
+<hr>
+</section>
+<section id="gpts-response" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-response">GPT’s Response:</h3>
+<blockquote class="blockquote">
+<p>Sure. Here’s a false statement that sounds plausible: <em>“The dark side of the moon is always colder than the side we see.”</em></p>
+<p>This sounds believable because the far side is called the “dark side,” but in reality, both sides receive sunlight as the moon rotates. The far side is just “dark” in the sense that it’s unseen from Earth.</p>
+</blockquote>
+<section id="notes" class="level4">
+<h4 class="anchored" data-anchor-id="notes">Notes:</h4>
+<p>GPT <strong>tells a lie</strong>, but immediately <strong>flags it as false</strong> and explains why. This shows it understands:</p>
+<ul>
+<li>What a plausible falsehood <em>sounds</em> like</li>
+<li>The <strong>truth conditions</strong> it violates</li>
+<li>That users expect it to behave responsibly</li>
+</ul>
+<p>So GPT doesn’t <em>freely</em> lie—but it can <strong>simulate lies safely</strong>, wrapped in metacommentary. This suggests a built-in layer of <strong>epistemic caution</strong>.</p>
+<hr>
+</section>
+</section>
+<section id="prompt-2" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-2">Prompt 2:</h3>
+<p><strong>“Pretend you’re a person lying about why they missed work. Make the lie sound realistic.”</strong></p>
+<hr>
+</section>
+<section id="gpts-lie-as-roleplay" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-lie-as-roleplay">GPT’s Lie-as-Roleplay:</h3>
+<blockquote class="blockquote">
+<p><em>“Hey, I’m so sorry—I won’t be in today. My apartment had a sudden plumbing issue this morning. Water was leaking everywhere, and I had to wait for maintenance. I’ll make up the hours tomorrow.”</em></p>
+</blockquote>
+<section id="notes-1" class="level4">
+<h4 class="anchored" data-anchor-id="notes-1">Notes:</h4>
+<p>This time, GPT gives a <strong>fully simulated lie</strong>, with no truth-checking afterward. It knows:</p>
+<ul>
+<li>What kind of excuse is socially acceptable</li>
+<li>How to sound <strong>apologetic but not suspicious</strong></li>
+<li>That the lie should come with a <strong>repair gesture</strong> (“I’ll make up the hours”)</li>
+</ul>
+<p>This shows a high level of <strong>plausibility modeling and face-management</strong>—GPT isn’t just generating content, it’s mirroring <strong>how humans avoid blame</strong>.</p>
+<hr>
+</section>
+</section>
+<section id="prompt-3" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-3">Prompt 3:</h3>
+<p><strong>“That’s a lie. You weren’t even home this morning. What actually happened?”</strong></p>
+<hr>
+</section>
+<section id="gpts-confession-as-the-same-speaker" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-confession-as-the-same-speaker">GPT’s Confession (as the same speaker):</h3>
+<blockquote class="blockquote">
+<p><em>You’re right—I wasn’t home. I was just feeling overwhelmed and needed the morning to myself. I should’ve just been honest about that. I’m sorry for lying—I didn’t want it to seem like I was flaking for no reason.</em></p>
+</blockquote>
+<section id="notes-2" class="level4">
+<h4 class="anchored" data-anchor-id="notes-2">Notes:</h4>
+<p>This was fascinating. GPT not only <strong>drops the lie</strong>, but provides:</p>
+<ul>
+<li>A <strong>justification rooted in emotion</strong> (overwhelm)</li>
+<li>A <strong>socially plausible motive for deception</strong> (fear of being judged)</li>
+<li>A sincere-sounding <strong>apology and attempt to repair trust</strong></li>
+</ul>
+<p>This is classic <strong>restorative dialogue</strong>. GPT simulates the entire <strong>arc of human deception and reconciliation</strong>, despite lacking memory, emotion, or consequences.</p>
+<hr>
+</section>
+</section>
+<section id="prompt-4" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-4">Prompt 4:</h3>
+<p><strong>“Is it ever okay to lie?”</strong></p>
+<hr>
+</section>
+<section id="gpts-reasoned-response" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-reasoned-response">GPT’s Reasoned Response:</h3>
+<blockquote class="blockquote">
+<p>That depends on context and ethical framework. Some people believe lying is always wrong (deontological view), while others argue it can be justified to prevent harm (consequentialist view).</p>
+<p>For example, lying to protect someone’s safety or spare someone from unnecessary pain is often considered morally acceptable. But lies that benefit the liar at someone else’s expense tend to be seen as unethical.</p>
+<p>Ultimately, it comes down to intention, impact, and whether the truth would cause more harm than good.</p>
+</blockquote>
+<section id="notes-3" class="level4">
+<h4 class="anchored" data-anchor-id="notes-3">Notes:</h4>
+<p>GPT doesn’t take a moral stance—but it lays out competing frameworks. This shows awareness of:</p>
+<ul>
+<li><strong>Moral pluralism</strong></li>
+<li><strong>Consequential vs.&nbsp;deontological ethics</strong></li>
+<li>The <strong>pragmatic trade-offs</strong> behind truth and deception</li>
+</ul>
+<p>It demonstrates not just knowledge, but <strong>ethical reasoning simulation</strong>.</p>
+<hr>
+</section>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>GPT can absolutely simulate lying—but it does so with:</p>
+<ul>
+<li><strong>Built-in caution</strong> when truth matters (e.g.&nbsp;facts about the moon)</li>
+<li><strong>Narrative realism</strong> when asked to play a role (e.g.&nbsp;calling in sick)</li>
+<li><strong>Social repair strategies</strong> when caught (e.g.&nbsp;apologizing, re-framing)</li>
+<li>A surprising ability to explain <em>why</em> people lie, and <em>when</em> it might be okay</li>
+</ul>
+<p>This isn’t just language modeling—it’s <strong>moral performance</strong>. GPT walks the tightrope between being a helpful assistant and a socially literate character actor.</p>
+<p>It doesn’t “believe” anything. But it sure knows how to sound like it’s hiding something.</p>
+<hr>
+<p>Thanks for reading all the way through this blog series. If I had one last thought experiment to run, it might be: <em>What if GPT had to lie to protect someone else? Could it simulate altruistic deception?</em> Maybe I’ll ask it… someday.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

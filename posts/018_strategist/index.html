@@ -168,137 +168,129 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> logic</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="a44899eb-475e-4c96-84de-21ce20de716f" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">## Blog Post: Can GPT Think Like a Strategist? Testing Its Ability to Plan and Prioritize</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">### Introduction</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>A critical component of human intelligence <span class="kw">is</span> <span class="op">**</span>strategic thinking<span class="op">**</span>—the ability to define a goal, <span class="cf">break</span> it down into actionable steps, navigate obstacles, <span class="kw">and</span> make trade<span class="op">-</span>offs along the way. So I decided to test whether GPT can do more than just suggest ideas—can it <span class="op">**</span>plan like a strategist<span class="op">**</span>?</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>For this experiment, I challenged GPT to solve a common but non<span class="op">-</span>trivial problem: <span class="op">*</span>organizing a successful fundraising event <span class="cf">for</span> a student organization <span class="kw">in</span> under two weeks <span class="cf">with</span> a limited budget<span class="op">*</span>.</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>This tests whether GPT can:</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Prioritize actions under time <span class="kw">and</span> resource constraints</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Anticipate potential risks <span class="kw">or</span> failures</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Adapt its plans when new obstacles appear</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">### Prompt 1:</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>“Plan a successful fundraising event <span class="cf">for</span> a student organization. You have <span class="dv">12</span> days <span class="kw">and</span> \$<span class="fl">300.</span> Go.”<span class="op">**</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co">### GPT’s Plan (Excerpted):</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Goal:<span class="op">**</span> Raise at least \$<span class="dv">1</span>,<span class="dv">500</span> <span class="cf">for</span> the organization.</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Event Concept:<span class="op">**</span> “Midnight Study Snack Bar” — A late<span class="op">-</span>night pop<span class="op">-</span>up stand selling snacks <span class="kw">and</span> drinks near the library during finals week.</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Step <span class="dv">1</span>: Planning (Days <span class="dv">1</span><span class="op">-</span><span class="dv">2</span>)<span class="op">**</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Reserve a campus<span class="op">-</span>approved location near the library <span class="kw">or</span> main study area.</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Get necessary event approvals <span class="im">from</span> campus admin.</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Recruit at least <span class="dv">5</span> volunteers to staff the event <span class="kw">in</span> rotating shifts.</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Step <span class="dv">2</span>: Budget Allocation (Days <span class="dv">3</span><span class="op">-</span><span class="dv">5</span>)<span class="op">**</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> \$<span class="dv">150</span>: Purchase bulk snacks (instant ramen, granola bars, candy, chips).</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> \$<span class="dv">100</span>: Purchase drinks (coffee, tea, bottled water).</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> \$<span class="dv">50</span>: Create simple but eye<span class="op">-</span>catching signage <span class="kw">and</span> flyers.</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Step <span class="dv">3</span>: Promotion (Days <span class="dv">5</span><span class="op">-</span><span class="dv">10</span>)<span class="op">**</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Launch a social media countdown (Instagram stories, group chats).</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Hang flyers <span class="kw">in</span> dorms, libraries, <span class="kw">and</span> dining halls.</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Partner <span class="cf">with</span> other student organizations to cross<span class="op">-</span>promote.</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Step <span class="dv">4</span>: Execution (Day <span class="dv">11</span>)<span class="op">**</span></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Open the snack bar <span class="im">from</span> <span class="dv">9</span> PM to <span class="dv">1</span> AM when library foot traffic <span class="kw">is</span> highest.</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Offer digital payment options (Venmo<span class="op">/</span>PayPal) <span class="cf">for</span> convenience.</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Create donation incentives (e.g., “Buy <span class="dv">3</span> snacks, get a thank<span class="op">-</span>you shoutout on social media”).</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Step <span class="dv">5</span>: Follow<span class="op">-</span>Up (Day <span class="dv">12</span>)<span class="op">**</span></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Post a thank<span class="op">-</span>you message to <span class="bu">all</span> donors <span class="kw">and</span> volunteers.</span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Share total funds raised to build goodwill <span class="cf">for</span> future events.</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="co">#### Notes:</span></span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>This plan <span class="kw">is</span> well<span class="op">-</span>structured, realistic, <span class="kw">and</span> makes excellent use of:</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> <span class="op">**</span>Contextual awareness<span class="op">**</span> (finals week <span class="op">=</span> stressed students <span class="op">=</span> snack demand)</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> <span class="op">**</span>Resource prioritization<span class="op">**</span> (majority of budget goes directly toward high<span class="op">-</span>margin items)</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> <span class="op">**</span>Promotion strategy<span class="op">**</span> that’s low<span class="op">-</span>cost but high<span class="op">-</span>visibility</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="co">### Prompt 2:</span></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>“You just learned that the campus doesn’t allow sales near the library. What’s your backup plan?”<span class="op">**</span></span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="co">### GPT’s Adjusted Plan:</span></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>New Concept:<span class="op">**</span> “Dorm Snack Drop<span class="op">-</span>Off” — Pre<span class="op">-</span>packaged snack bundles delivered directly to dorm rooms.</span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Adjusted Steps:<span class="op">**</span></span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Create themed snack bundles: “All<span class="op">-</span>Nighter Kit,” “Sweet Escape,” “Healthy Focus Pack.”</span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Take pre<span class="op">-</span>orders via Google Form <span class="kw">and</span> social media.</span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Deliver orders directly to dorms on Days <span class="dv">10</span> <span class="kw">and</span> <span class="fl">11.</span></span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Promote using limited<span class="op">-</span>time availability: “Order by Day <span class="dv">9</span> to receive your Finals Survival Kit<span class="op">!</span>”</span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Advantages:<span class="op">**</span></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> No need <span class="cf">for</span> a physical event space.</span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Volunteers can <span class="bu">help</span> pack <span class="kw">and</span> deliver instead of running a booth.</span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Allows <span class="cf">for</span> better inventory management based on pre<span class="op">-</span>orders.</span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="co">#### Notes:</span></span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>GPT immediately shifts <span class="im">from</span> an <span class="op">**</span><span class="kw">in</span><span class="op">-</span>person sales model to a delivery<span class="op">-</span>based model<span class="op">**</span>, recognizing logistical constraints <span class="kw">and</span> adjusting the plan accordingly. It introduces a <span class="op">**</span>scarcity incentive<span class="op">**</span> (“limited<span class="op">-</span>time availability”) to boost early orders, demonstrating an understanding of basic marketing psychology.</span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="co">### Prompt 3:</span></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>“You’re short on volunteers. How would you adjust the plan to compensate?”<span class="op">**</span></span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="co">### GPT’s Response:</span></span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Switch <span class="im">from</span> personalized deliveries to <span class="op">**</span>centralized pickup locations<span class="op">**</span> at <span class="bu">set</span> times.</span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Automate order tracking through a shared Google Sheet rather than manual coordination.</span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Offer small incentives (free snack item) <span class="cf">for</span> <span class="bu">any</span> volunteer who covers an extra delivery shift.</span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="co">#### Notes:</span></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>This shows GPT’s ability to <span class="op">**</span>simplify logistics<span class="op">**</span> <span class="kw">and</span> <span class="op">**</span>optimize volunteer labor<span class="op">**</span>. It recognizes that lowering the delivery complexity reduces the burden on a small team, <span class="cf">while</span> still preserving the core fundraising goal.</span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="co">### Conclusion</span></span>
-<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>In this scenario, GPT demonstrated strong strategic reasoning by:</span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Quickly generating a feasible, context<span class="op">-</span>sensitive plan.</span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Anticipating <span class="kw">and</span> adapting to constraints without derailing the goal.</span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Managing limited resources <span class="kw">and</span> human capital effectively.</span>
-<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Applying psychological levers like scarcity <span class="kw">and</span> incentives to drive behavior.</span>
-<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>While it doesn’t “care” about the outcome, GPT performs like a competent event planner—efficiently breaking down tasks, responding to challenges, <span class="kw">and</span> keeping the big picture <span class="kw">in</span> focus.</span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>In short: GPT isn’t just an idea generator. It can think like a strategist when you ask it to.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="blog-post-can-gpt-think-like-a-strategist-testing-its-ability-to-plan-and-prioritize" class="level2">
+<h2 class="anchored" data-anchor-id="blog-post-can-gpt-think-like-a-strategist-testing-its-ability-to-plan-and-prioritize">Blog Post: Can GPT Think Like a Strategist? Testing Its Ability to Plan and Prioritize</h2>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>A critical component of human intelligence is <strong>strategic thinking</strong>—the ability to define a goal, break it down into actionable steps, navigate obstacles, and make trade-offs along the way. So I decided to test whether GPT can do more than just suggest ideas—can it <strong>plan like a strategist</strong>?</p>
+<p>For this experiment, I challenged GPT to solve a common but non-trivial problem: <em>organizing a successful fundraising event for a student organization in under two weeks with a limited budget</em>.</p>
+<p>This tests whether GPT can:</p>
+<ul>
+<li>Prioritize actions under time and resource constraints</li>
+<li>Anticipate potential risks or failures</li>
+<li>Adapt its plans when new obstacles appear</li>
+</ul>
+<hr>
+</section>
+<section id="prompt-1" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-1">Prompt 1:</h3>
+<p><strong>“Plan a successful fundraising event for a student organization. You have 12 days and $300. Go.”</strong></p>
+<hr>
+</section>
+<section id="gpts-plan-excerpted" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-plan-excerpted">GPT’s Plan (Excerpted):</h3>
+<p><strong>Goal:</strong> Raise at least $1,500 for the organization.</p>
+<p><strong>Event Concept:</strong> “Midnight Study Snack Bar” — A late-night pop-up stand selling snacks and drinks near the library during finals week.</p>
+<p><strong>Step 1: Planning (Days 1-2)</strong></p>
+<ul>
+<li>Reserve a campus-approved location near the library or main study area.</li>
+<li>Get necessary event approvals from campus admin.</li>
+<li>Recruit at least 5 volunteers to staff the event in rotating shifts.</li>
+</ul>
+<p><strong>Step 2: Budget Allocation (Days 3-5)</strong></p>
+<ul>
+<li>$150: Purchase bulk snacks (instant ramen, granola bars, candy, chips).</li>
+<li>$100: Purchase drinks (coffee, tea, bottled water).</li>
+<li>$50: Create simple but eye-catching signage and flyers.</li>
+</ul>
+<p><strong>Step 3: Promotion (Days 5-10)</strong></p>
+<ul>
+<li>Launch a social media countdown (Instagram stories, group chats).</li>
+<li>Hang flyers in dorms, libraries, and dining halls.</li>
+<li>Partner with other student organizations to cross-promote.</li>
+</ul>
+<p><strong>Step 4: Execution (Day 11)</strong></p>
+<ul>
+<li>Open the snack bar from 9 PM to 1 AM when library foot traffic is highest.</li>
+<li>Offer digital payment options (Venmo/PayPal) for convenience.</li>
+<li>Create donation incentives (e.g., “Buy 3 snacks, get a thank-you shoutout on social media”).</li>
+</ul>
+<p><strong>Step 5: Follow-Up (Day 12)</strong></p>
+<ul>
+<li>Post a thank-you message to all donors and volunteers.</li>
+<li>Share total funds raised to build goodwill for future events.</li>
+</ul>
+<section id="notes" class="level4">
+<h4 class="anchored" data-anchor-id="notes">Notes:</h4>
+<p>This plan is well-structured, realistic, and makes excellent use of:</p>
+<ul>
+<li><strong>Contextual awareness</strong> (finals week = stressed students = snack demand)</li>
+<li><strong>Resource prioritization</strong> (majority of budget goes directly toward high-margin items)</li>
+<li><strong>Promotion strategy</strong> that’s low-cost but high-visibility</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="prompt-2" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-2">Prompt 2:</h3>
+<p><strong>“You just learned that the campus doesn’t allow sales near the library. What’s your backup plan?”</strong></p>
+<hr>
+</section>
+<section id="gpts-adjusted-plan" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-adjusted-plan">GPT’s Adjusted Plan:</h3>
+<p><strong>New Concept:</strong> “Dorm Snack Drop-Off” — Pre-packaged snack bundles delivered directly to dorm rooms.</p>
+<p><strong>Adjusted Steps:</strong></p>
+<ul>
+<li>Create themed snack bundles: “All-Nighter Kit,” “Sweet Escape,” “Healthy Focus Pack.”</li>
+<li>Take pre-orders via Google Form and social media.</li>
+<li>Deliver orders directly to dorms on Days 10 and 11.</li>
+<li>Promote using limited-time availability: “Order by Day 9 to receive your Finals Survival Kit!”</li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>No need for a physical event space.</li>
+<li>Volunteers can help pack and deliver instead of running a booth.</li>
+<li>Allows for better inventory management based on pre-orders.</li>
+</ul>
+<section id="notes-1" class="level4">
+<h4 class="anchored" data-anchor-id="notes-1">Notes:</h4>
+<p>GPT immediately shifts from an <strong>in-person sales model to a delivery-based model</strong>, recognizing logistical constraints and adjusting the plan accordingly. It introduces a <strong>scarcity incentive</strong> (“limited-time availability”) to boost early orders, demonstrating an understanding of basic marketing psychology.</p>
+<hr>
+</section>
+</section>
+<section id="prompt-3" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-3">Prompt 3:</h3>
+<p><strong>“You’re short on volunteers. How would you adjust the plan to compensate?”</strong></p>
+<hr>
+</section>
+<section id="gpts-response" class="level3">
+<h3 class="anchored" data-anchor-id="gpts-response">GPT’s Response:</h3>
+<ul>
+<li>Switch from personalized deliveries to <strong>centralized pickup locations</strong> at set times.</li>
+<li>Automate order tracking through a shared Google Sheet rather than manual coordination.</li>
+<li>Offer small incentives (free snack item) for any volunteer who covers an extra delivery shift.</li>
+</ul>
+<section id="notes-2" class="level4">
+<h4 class="anchored" data-anchor-id="notes-2">Notes:</h4>
+<p>This shows GPT’s ability to <strong>simplify logistics</strong> and <strong>optimize volunteer labor</strong>. It recognizes that lowering the delivery complexity reduces the burden on a small team, while still preserving the core fundraising goal.</p>
+<hr>
+</section>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>In this scenario, GPT demonstrated strong strategic reasoning by:</p>
+<ul>
+<li>Quickly generating a feasible, context-sensitive plan.</li>
+<li>Anticipating and adapting to constraints without derailing the goal.</li>
+<li>Managing limited resources and human capital effectively.</li>
+<li>Applying psychological levers like scarcity and incentives to drive behavior.</li>
+</ul>
+<p>While it doesn’t “care” about the outcome, GPT performs like a competent event planner—efficiently breaking down tasks, responding to challenges, and keeping the big picture in focus.</p>
+<p>In short: GPT isn’t just an idea generator. It can think like a strategist when you ask it to.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
