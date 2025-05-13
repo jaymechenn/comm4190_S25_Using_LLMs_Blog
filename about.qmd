@@ -1,8 +1,8 @@
 ---
 title: About
-image: profile.jpg
+image: Jayme.JPG
 about:
   template: jolla
 ---
 
-About this blog
+Hi, I'm Jayme, an UPenn undergrad studying Artificial Intelligence. Welcome to my experiments with and exploration of large language models (LLMs), primarily ChatGPT, through series of interesting prompts and responses. Some of the blogs are silly while others are more serious, but all explore various abilities of the model such as logical reasoning or emotional awareness. Please, sit down, grab a coffee, and happy reading! 
